@@ -1300,6 +1300,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <strong>DigiSakhi Assistant</strong>
           <span>Ask me anything about online safety</span>
         </div>
+        <button class="chat-reset" id="chatReset" aria-label="Reset chat" title="Start new chat"><i class="fas fa-rotate-right"></i></button>
         <button class="chat-close" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
       </div>
       <div class="chat-messages" id="chatMessages"></div>
@@ -1349,6 +1350,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const resetBtn  = document.getElementById('chatReset');
+
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
@@ -1359,6 +1362,22 @@ document.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation();
     e.preventDefault();
     if (isOpen) toggleChat();
+  });
+
+  resetBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    /* Clear all messages and reset counter */
+    messages.innerHTML = '';
+    quickArea.innerHTML = '';
+    msgCount = 0;
+    isTyping = false;
+    sendBtn.disabled = false;
+    input.value = '';
+    /* Show fresh greeting */
+    addBotMessage('👋 Chat reset! Ask me anything about online safety, scams, or digital literacy.');
+    showQuickReplies();
+    input.focus();
   });
 
   /* Stop clicks inside the chat window from bubbling */
