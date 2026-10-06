@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiSakhi – Digital Empowerment for Women SHGs</title>
+  <meta name="description" content="DigiSakhi is a free digital literacy website for women in Self-Help Groups. Learn smartphone basics, online safety, social media, and access helplines."/>
+  <meta name="keywords" content="women digital literacy, SHG, self help group, smartphone safety, online safety, cyber crime, women helpline, UPI, WhatsApp safety, India"/>
+  <meta name="author" content="DigiSakhi"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://digisakhi2026.netlify.app/"/>
+
+  <!-- Open Graph (for WhatsApp / Facebook link preview) -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://digisakhi2026.netlify.app/"/>
+  <meta property="og:title"       content="DigiSakhi – Digital Empowerment for Women"/>
+  <meta property="og:description" content="Free digital literacy resource for women in Self-Help Groups. Learn smartphone basics, stay safe online, and access helplines."/>
+  <meta property="og:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="DigiSakhi – Digital Empowerment for Women"/>
+  <meta name="twitter:description" content="Free digital literacy resource for women SHGs in India."/>
+  <meta name="twitter:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-mobile-screen-button"></i>
+        <span>DigiSakhi</span></a>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a></li>
+        <li><a href="social-media.html"><i class="fas fa-share-nodes"></i> Social Media</a></li>
+        <li><a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a></li>
+        <li><a href="ai-safety.html"><i class="fas fa-robot"></i> AI Safety</a></li>
+        <li><a href="resources.html"><i class="fas fa-hands-helping"></i> Resources</a></li>
+        <li><a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a></li>
+        <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="images/homepagevideo.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-star"></i> Women Self-Help Groups</div>
+      <h1>Your Guide to the<br/><span class="highlight">Digital World</span></h1>
+      <p class="hero-sub">Learn how to use your smartphone safely, protect yourself online, and connect with your community — in simple steps.</p>
+      <div class="hero-btns">
+        <a href="online-safety.html" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start Learning</a>
+        <a href="resources.html" class="btn btn-outline"><i class="fas fa-phone-volume"></i> Get Help Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE SAFETY TIPS ===== -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span><i class="fas fa-lock"></i> Use a strong PIN to lock your phone &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-eye-slash"></i> Never share OTP with anyone &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-wifi"></i> Avoid public Wi-Fi for banking &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-user-shield"></i> Keep your personal details private online &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-bell"></i> Update your apps regularly &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-lock"></i> Use a strong PIN to lock your phone &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-eye-slash"></i> Never share OTP with anyone &nbsp;•&nbsp;</span>
+      <span><i class="fas fa-wifi"></i> Avoid public Wi-Fi for banking &nbsp;•&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-tag">About DigiSakhi</div>
+          <h2>Empowering Women Through<br/><span class="highlight">Digital Literacy</span></h2>
+          <p>DigiSakhi is a free learning resource designed specially for women in Self-Help Groups (SHGs). We help you understand your smartphone, stay safe online, and make the most of digital tools — without any tech background needed.</p>
+          <p>Our content is simple, practical, and available in a format that is easy for everyone to understand. Whether you are just starting with a smartphone or want to learn about online safety, this is the right place for you.</p>
+          <ul class="about-points">
+            <li><i class="fas fa-check-circle"></i> Easy-to-follow lessons for beginners</li>
+            <li><i class="fas fa-check-circle"></i> Practical tips for everyday digital use</li>
+            <li><i class="fas fa-check-circle"></i> Safety guidance to protect you and your family</li>
+            <li><i class="fas fa-check-circle"></i> Resources and helplines for support</li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <div class="phone-mockup">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-ui">
+                  <div class="phone-status-bar">
+                    <span>9:41</span>
+                    <span><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i></span>
+                  </div>
+                  <div class="phone-app-icons">
+                    <div class="app-icon" style="background:#4ade80"><i class="fas fa-phone"></i></div>
+                    <div class="app-icon" style="background:#60a5fa"><i class="fab fa-whatsapp"></i></div>
+                    <div class="app-icon" style="background:#f472b6"><i class="fas fa-camera"></i></div>
+                    <div class="app-icon" style="background:#fb923c"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="app-icon" style="background:#a78bfa"><i class="fas fa-university"></i></div>
+                    <div class="app-icon" style="background:#34d399"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="app-icon" style="background:#f87171"><i class="fas fa-heart"></i></div>
+                    <div class="app-icon" style="background:#fbbf24"><i class="fas fa-star"></i></div>
+                  </div>
+                  <div class="phone-text">DigiSakhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOPICS CARDS ===== -->
+  <section class="section topics-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">What You Will Learn</div>
+        <h2>Explore Our <span class="highlight">Topics</span></h2>
+        <p>Choose a topic below to start your digital learning journey</p>
+      </div>
+      <div class="topics-grid">
+
+        <a href="real-incidents.html" class="topic-card card-purple">
+          <div class="topic-icon"><i class="fas fa-exclamation-circle"></i></div>
+          <h3>Real Incidents</h3>
+          <p>Watch real videos, read victim stories, and see data on how women across India have faced online threats.</p>
+          <div class="topic-lessons"><i class="fas fa-play-circle"></i> Videos, Stories &amp; Data</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="mobile-usage.html" class="topic-card topic-card-blue">
+          <div class="topic-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile Usage</h3>
+          <p>Learn how to make calls, use WhatsApp, take photos, manage storage and keep your phone safe.</p>
+          <div class="topic-lessons"><i class="fas fa-book-open"></i> 5 Topics</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="online-safety.html" class="topic-card card-pink">
+          <div class="topic-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Online Safety</h3>
+          <p>Understand online threats, protect your passwords, and stay safe from fraud and scams.</p>
+          <div class="topic-lessons"><i class="fas fa-book-open"></i> 10 Lessons</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="social-media.html" class="topic-card card-teal">
+          <div class="topic-icon"><i class="fas fa-share-nodes"></i></div>
+          <h3>Social Media</h3>
+          <p>Use WhatsApp, Facebook, and other platforms safely and connect with your SHG group.</p>
+          <div class="topic-lessons"><i class="fas fa-book-open"></i> 7 Lessons</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="resources.html" class="topic-card card-orange">
+          <div class="topic-icon"><i class="fas fa-hands-helping"></i></div>
+          <h3>Help &amp; Resources</h3>
+          <p>Access helplines, government schemes, useful apps, and support for women in need.</p>
+          <div class="topic-lessons"><i class="fas fa-phone"></i> Helplines &amp; Links</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="ai-safety.html" class="topic-card card-violet">
+          <div class="topic-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI Safety &amp; Awareness</h3>
+          <p>Learn how AI can be helpful and dangerous. See real victim text messages, reviews, and prevention tips.</p>
+          <div class="topic-lessons"><i class="fas fa-brain"></i> AI Risks &amp; Reviews</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="file-complaint.html" class="topic-card card-red">
+          <div class="topic-icon"><i class="fas fa-gavel"></i></div>
+          <h3>File a Complaint</h3>
+          <p>Report scams, data leaks, privacy violations, and online threats. Get direct links to official cyber security websites.</p>
+          <div class="topic-lessons"><i class="fas fa-balance-scale"></i> Official Complaint Links</div>
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK TIPS ===== -->
+  <section class="section tips-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Stay Safe</div>
+        <h2>Quick <span class="highlight">Safety Tips</span></h2>
+        <p>Simple rules to keep yourself safe in the digital world</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-item">
+          <div class="tip-num">01</div>
+          <div class="tip-icon"><i class="fas fa-lock"></i></div>
+          <h4>Lock Your Phone</h4>
+          <p>Always set a PIN, pattern, or fingerprint lock on your phone to prevent others from accessing your data.</p>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">02</div>
+          <div class="tip-icon"><i class="fas fa-key"></i></div>
+          <h4>Never Share OTP</h4>
+          <p>No bank, government office, or company will ever ask for your OTP. Never share it with anyone — even family.</p>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">03</div>
+          <div class="tip-icon"><i class="fas fa-user-secret"></i></div>
+          <h4>Guard Personal Info</h4>
+          <p>Do not share your Aadhaar number, bank details, or address with unknown people online or on phone.</p>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">04</div>
+          <div class="tip-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h4>Think Before You Click</h4>
+          <p>Do not click links from unknown messages. Fraudsters send fake links to steal your information and money.</p>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">05</div>
+          <div class="tip-icon"><i class="fas fa-download"></i></div>
+          <h4>Download Safely</h4>
+          <p>Only download apps from the Google Play Store or Apple App Store. Avoid apps from unknown websites.</p>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">06</div>
+          <div class="tip-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>Keep Apps Updated</h4>
+          <p>Update your phone and apps regularly. Updates fix security problems and keep your phone safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BANNER ===== -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="800">0</div>
+          <div class="stat-label">Million Smartphone Users in India</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="67">0</div>
+          <div class="stat-label">% of Online Fraud Targets Women</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Lakh+ SHG Members Reached</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">% Free Learning Resources</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Stories</div>
+        <h2>Women Who <span class="highlight">Learned &amp; Grew</span></h2>
+        <p>Real stories from SHG members across India who used DigiSakhi to stay safe and confident online</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I was afraid to use a smartphone. After learning from DigiSakhi, I now do UPI payments and use WhatsApp to communicate with my SHG group every day."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#c084fc">S</div>
+            <div><strong>Sunita Devi</strong><span>SHG Member, Bihar</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I almost lost money to a fake call. DigiSakhi's online safety lesson helped me recognise the fraud and I reported it immediately to cyber police."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#34d399">R</div>
+            <div><strong>Rekha Kumari</strong><span>SHG Leader, Jharkhand</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Now I teach other women in my village how to use smartphones safely. DigiSakhi gave me the confidence to become a digital helper in my community."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#fb923c">M</div>
+            <div><strong>Meena Sharma</strong><span>SHG Trainer, Rajasthan</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Someone added me to a Telegram group promising ₹500 per task. I read about it on DigiSakhi first and did not invest. I saved my family's money from a scam."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#229ed9">P</div>
+            <div><strong>Priya Nair</strong><span>SHG Member, Kerala</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"My Instagram was public and someone threatened me with my photos. I called 1930 immediately as DigiSakhi taught me. The police arrested the person within 2 weeks."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#f472b6">A</div>
+            <div><strong>Anita Bai</strong><span>SHG Member, Madhya Pradesh</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I used to forward every WhatsApp message I received. After DigiSakhi I check facts first on boomlive.in. My group respects me now for sharing only true information."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#f59e0b">L</div>
+            <div><strong>Lakshmi Reddy</strong><span>SHG Leader, Telangana</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I received a UPI collect request while selling vegetables online. I remembered DigiSakhi's lesson and declined. The buyer vanished immediately — it was a scam."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#0d9488">K</div>
+            <div><strong>Kamala Devi</strong><span>SHG Member, Tamil Nadu</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"I created a Facebook page for my SHG pickle business after watching DigiSakhi's guide. We now get orders from 3 districts and our income has doubled."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#1877f2">D</div>
+            <div><strong>Deepa Kulkarni</strong><span>SHG Entrepreneur, Maharashtra</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"A voice message came saying my son had an accident and needed money urgently. I called him back first as DigiSakhi taught me. He was completely fine — it was AI voice fraud."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#7c3aed">G</div>
+            <div><strong>Geeta Patel</strong><span>SHG Member, Gujarat</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMERGENCY HELPLINE STRIP ===== -->
+  <div class="helpline-strip">
+    <div class="container">
+      <div class="helpline-content">
+        <i class="fas fa-phone-alt pulse"></i>
+        <strong>Emergency Helplines:</strong>
+        <span>Women Helpline: <a href="tel:1091">1091</a></span>
+        <span>Cyber Crime: <a href="tel:1930">1930</a></span>
+        <span>Police: <a href="tel:100">100</a></span>
+        <span>Child Helpline: <a href="tel:1098">1098</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-mobile-screen-button"></i>
+            <span>DigiSakhi</span></a>
+      
+          <p>Empowering women through digital literacy. A free resource for Self-Help Groups across India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-chevron-right"></i> Online Safety</a></li>
+            <li><a href="social-media.html"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+            <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Safety Topics</h4>
+          <ul>
+            <li><a href="online-safety.html#passwords"><i class="fas fa-chevron-right"></i> Password Safety</a></li>
+            <li><a href="online-safety.html#fraud"><i class="fas fa-chevron-right"></i> Online Fraud</a></li>
+            <li><a href="online-safety.html#privacy"><i class="fas fa-chevron-right"></i> Privacy Settings</a></li>
+            <li><a href="social-media.html#whatsapp"><i class="fas fa-chevron-right"></i> WhatsApp Safety</a></li>
+            <li><a href="resources.html#helplines"><i class="fas fa-chevron-right"></i> Helplines</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Emergency Contacts</h4>
+          <div class="emergency-list">
+            <div class="emergency-item"><i class="fas fa-phone"></i><span>Women Helpline</span><strong>1091</strong></div>
+            <div class="emergency-item"><i class="fas fa-laptop"></i><span>Cyber Crime</span><strong>1930</strong></div>
+            <div class="emergency-item"><i class="fas fa-shield-alt"></i><span>Police</span><strong>100</strong></div>
+            <div class="emergency-item"><i class="fas fa-ambulance"></i><span>Ambulance</span><strong>108</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DigiSakhi. Made with <i class="fas fa-heart" style="color:#f472b6"></i> for Women of India. All content is free to use and share.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found – DigiSakhi</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #be185d 100%);
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-box {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      width: 100%;
+      color: #fff;
+    }
+    .error-num {
+      font-size: 7rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #fde68a;
+      margin-bottom: 0.5rem;
+    }
+    .error-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .error-box h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .error-box p {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .error-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .error-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-white {
+      background: #fff;
+      color: #7c3aed;
+    }
+    .btn-white:hover {
+      background: #fde68a;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+    }
+  </style>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+  <div class="error-page">
+    <div class="error-box">
+      <div class="error-icon">🔍</div>
+      <div class="error-num">404</div>
+      <h2>Page Not Found</h2>
+      <p>Oops! The page you are looking for does not exist or may have been moved. Let's get you back on track.</p>
+      <div class="error-links">
+        <a href="index.html" class="btn-white"><i class="fas fa-home"></i> Go to Home</a>
+        <a href="social-media.html" class="btn-ghost"><i class="fas fa-share-nodes"></i> Social Media</a>
+        <a href="online-safety.html" class="btn-ghost"><i class="fas fa-shield-halved"></i> Online Safety</a>
+        <a href="resources.html" class="btn-ghost"><i class="fas fa-hands-helping"></i> Resources</a>
+      </div>
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.2); font-size:0.85rem; opacity:0.7;">
+        <i class="fas fa-phone-alt"></i> Emergency? Call Women Helpline: <strong style="color:#fde68a;">1091</strong>
+        &nbsp;|&nbsp; Cyber Crime: <strong style="color:#fde68a;">1930</strong>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>

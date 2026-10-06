@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick Quiz – DigiSakhi</title>
+  <meta name="description" content="Test what you know about online safety, UPI payments, AI dangers, social media, and cyber crime. 5 quick questions from DigiSakhi."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="canonical" href="https://digisakhi2026.netlify.app/quick-quiz.html"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a></li>
+        <li><a href="social-media.html"><i class="fas fa-share-nodes"></i> Social Media</a></li>
+        <li><a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a></li>
+        <li><a href="ai-safety.html"><i class="fas fa-robot"></i> AI Safety</a></li>
+        <li><a href="resources.html"><i class="fas fa-hands-helping"></i> Resources</a></li>
+        <li><a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a></li>
+        <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background:linear-gradient(135deg,#4c1d95,#7c3aed)">
+    <div class="page-hero-content">
+      <div class="page-hero-icon"><i class="fas fa-brain"></i></div>
+      <h1>Quick Safety Quiz</h1>
+      <p>5 simple questions to check what you know about staying safe online. Takes less than 2 minutes!</p>
+    </div>
+  </section>
+
+  <!-- QUIZ SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div id="qq-wrap">
+
+        <!-- PROGRESS -->
+        <div class="qq-progress-bar" id="qqProgressBar">
+          <div class="qq-progress-fill" id="qqProgressFill" style="width:0%"></div>
+        </div>
+
+        <!-- QUESTION AREA -->
+        <div class="qq-card" id="qqCard">
+
+          <!-- Intro screen -->
+          <div id="qq-intro" class="qq-screen active">
+            <div class="qq-intro-icon"><i class="fas fa-brain"></i></div>
+            <h2>Test Your Digital Safety Knowledge</h2>
+            <p>5 easy questions covering Online Safety, UPI Payments, AI Dangers, Social Media, and How to Report Cyber Crime.</p>
+            <ul class="qq-intro-list">
+              <li><i class="fas fa-check-circle"></i> No right or wrong judgement — just learning</li>
+              <li><i class="fas fa-check-circle"></i> Each question has 4 options — pick the best one</li>
+              <li><i class="fas fa-check-circle"></i> You will see the correct answer after each question</li>
+              <li><i class="fas fa-check-circle"></i> Takes less than 2 minutes</li>
+            </ul>
+            <button class="btn btn-primary qq-start-btn" onclick="qqStart()">
+              <i class="fas fa-play-circle"></i> Start Quiz
+            </button>
+          </div>
+
+          <!-- Question screen (populated by JS) -->
+          <div id="qq-question" class="qq-screen"></div>
+
+          <!-- Result screen -->
+          <div id="qq-result" class="qq-screen">
+            <div class="qq-result-icon" id="qqResultIcon">🎉</div>
+            <div class="qq-score" id="qqScore"></div>
+            <h3 id="qqResultMsg"></h3>
+            <p id="qqResultSub"></p>
+            <div class="qq-result-btns">
+              <button class="btn btn-primary" onclick="qqRestart()">
+                <i class="fas fa-redo"></i> Try Again
+              </button>
+              <a href="feedback.html" class="btn" style="background:#059669;color:#fff">
+                <i class="fas fa-comment-dots"></i> Give Feedback
+              </a>
+            </div>
+            <div class="qq-result-links">
+              <p>Want to learn more? Visit these pages:</p>
+              <div class="qq-links-grid">
+                <a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a>
+                <a href="ai-safety.html"><i class="fas fa-robot"></i> AI Safety</a>
+                <a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a>
+                <a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPLINE STRIP -->
+  <div class="helpline-strip">
+    <div class="container">
+      <div class="helpline-content">
+        <i class="fas fa-phone-alt pulse"></i>
+        <strong>Emergency Helplines:</strong>
+        <span>Cyber Crime: <a href="tel:1930">1930</a></span>
+        <span>Women Helpline: <a href="tel:1091">1091</a></span>
+        <span>Police: <a href="tel:100">100</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span></a>
+          <p>Empowering women through digital literacy. A free resource for Self-Help Groups across India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-chevron-right"></i> Online Safety</a></li>
+            <li><a href="ai-safety.html"><i class="fas fa-chevron-right"></i> AI Safety</a></li>
+            <li><a href="file-complaint.html"><i class="fas fa-chevron-right"></i> File Complaint</a></li>
+            <li><a href="feedback.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Emergency Contacts</h4>
+          <div class="emergency-list">
+            <div class="emergency-item"><i class="fas fa-laptop"></i><span>Cyber Crime</span><strong>1930</strong></div>
+            <div class="emergency-item"><i class="fas fa-phone"></i><span>Women Helpline</span><strong>1091</strong></div>
+            <div class="emergency-item"><i class="fas fa-shield-alt"></i><span>Police</span><strong>100</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <a href="admin.html" style="color:inherit;text-decoration:none;" title="">2026</a> DigiSakhi. Made with <i class="fas fa-heart" style="color:#f472b6"></i> for Women of India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  /* ============================================================
+     Quick Quiz — 5 questions covering all website topics
+     ============================================================ */
+  const QQ_QUESTIONS = [
+    {
+      topic: 'Online Safety',
+      icon: 'fas fa-shield-halved',
+      color: '#db2777',
+      q: 'Someone calls you saying your bank account will be blocked. They ask for your OTP. What should you do?',
+      options: [
+        'Share the OTP quickly so your account is not blocked',
+        'Hang up immediately — banks never ask for OTP on a call',
+        'Call back on the same number to verify',
+        'Share only the last 4 digits of the OTP'
+      ],
+      correct: 1,
+      explanation: 'Real banks NEVER ask for your OTP on a phone call. This is a classic fraud call. Always hang up and call your bank\'s official number from the back of your card.'
+    },
+    {
+      topic: 'UPI & Google Pay',
+      icon: 'fas fa-rupee-sign',
+      color: '#4285f4',
+      q: 'You are selling a saree online. The buyer sends a notification saying "Accept ₹1,500 payment." What is this?',
+      options: [
+        'Your payment has arrived — approve it',
+        'A UPI Collect Request — it will take ₹1,500 FROM you if you approve',
+        'A safe Google Pay transfer — nothing to worry about',
+        'A refund from a previous order'
+      ],
+      correct: 1,
+      explanation: 'This is a Collect Request scam! Approving it SENDS ₹1,500 from your account — it does NOT receive money. To receive money on UPI, you do nothing. No approval needed.'
+    },
+    {
+      topic: 'AI Safety',
+      icon: 'fas fa-robot',
+      color: '#8b5cf6',
+      q: 'You receive a voice message from your "daughter" saying she had an accident and needs ₹20,000 urgently. What should you do first?',
+      options: [
+        'Send the money immediately — she is in danger',
+        'Call your daughter back on her saved phone number to verify',
+        'Send half the amount first and verify later',
+        'Forward the voice message to other family members for help'
+      ],
+      correct: 1,
+      explanation: 'AI can clone any person\'s voice from a short recording. Always hang up and call back on the saved number before sending money. If it was really an emergency, she will answer.'
+    },
+    {
+      topic: 'Social Media Safety',
+      icon: 'fas fa-share-nodes',
+      color: '#0d9488',
+      q: 'You see a WhatsApp message saying "Government is giving ₹8,000 to all women. Forward to 10 people to get it." What should you do?',
+      options: [
+        'Forward it to all contacts immediately',
+        'Forward it only to close family members',
+        'Delete it — real government schemes never work this way',
+        'Click the link in the message to register'
+      ],
+      correct: 2,
+      explanation: 'Government schemes NEVER distribute money through WhatsApp forwards. This is fake news. Delete it and tell the sender it is false. Forwarding fake news can also get you in legal trouble.'
+    },
+    {
+      topic: 'Filing a Complaint',
+      icon: 'fas fa-gavel',
+      color: '#dc2626',
+      q: 'You just lost ₹5,000 in an online fraud. What is the FIRST thing you should do?',
+      options: [
+        'Wait and see if the money comes back on its own',
+        'Tell your SHG members and ask for advice',
+        'Call 1930 immediately — the cyber crime helpline',
+        'Visit the police station the next morning'
+      ],
+      correct: 2,
+      explanation: 'Call 1930 IMMEDIATELY. The faster you report, the higher the chance of freezing the fraudster\'s account before they withdraw your money. Time is critical — every minute matters.'
+    }
+  ];
+
+  let qqCurrent = 0;
+  let qqScore   = 0;
+  let qqAnswered = false;
+
+  function qqStart() {
+    qqCurrent = 0;
+    qqScore   = 0;
+    qqAnswered = false;
+    showScreen('qq-question');
+    qqRender();
+  }
+
+  function qqRestart() {
+    qqStart();
+  }
+
+  function showScreen(id) {
+    document.querySelectorAll('.qq-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function qqRender() {
+    const q = QQ_QUESTIONS[qqCurrent];
+    const pct = (qqCurrent / QQ_QUESTIONS.length) * 100;
+    document.getElementById('qqProgressFill').style.width = pct + '%';
+
+    const html = `
+      <div class="qq-topic-badge" style="background:${q.color}20;color:${q.color}">
+        <i class="${q.icon}"></i> ${q.topic}
+      </div>
+      <div class="qq-qnum">Question ${qqCurrent + 1} of ${QQ_QUESTIONS.length}</div>
+      <div class="qq-question-text">${q.q}</div>
+      <div class="qq-options" id="qqOptions">
+        ${q.options.map((opt, i) => `
+          <button class="qq-option" onclick="qqAnswer(${i})">
+            <span class="qq-opt-letter">${'ABCD'[i]}</span>
+            <span class="qq-opt-text">${opt}</span>
+          </button>`).join('')}
+      </div>
+      <div class="qq-feedback" id="qqFeedback"></div>`;
+
+    document.getElementById('qq-question').innerHTML = html;
+    qqAnswered = false;
+  }
+
+  function qqAnswer(idx) {
+    if (qqAnswered) return;
+    qqAnswered = true;
+
+    const q = QQ_QUESTIONS[qqCurrent];
+    const opts = document.querySelectorAll('.qq-option');
+    opts.forEach(o => o.disabled = true);
+
+    opts[q.correct].classList.add('qq-correct');
+    if (idx === q.correct) {
+      qqScore++;
+    } else {
+      opts[idx].classList.add('qq-wrong');
+    }
+
+    const fb = document.getElementById('qqFeedback');
+    const isRight = idx === q.correct;
+    fb.innerHTML = `
+      <div class="qq-fb-box ${isRight ? 'qq-fb-right' : 'qq-fb-wrong'}">
+        <i class="fas ${isRight ? 'fa-check-circle' : 'fa-times-circle'}"></i>
+        <div>
+          <strong>${isRight ? 'Correct!' : 'Not quite.'}</strong>
+          <p>${q.explanation}</p>
+        </div>
+      </div>`;
+
+    /* Show Next / Finish button */
+    const isLast = qqCurrent === QQ_QUESTIONS.length - 1;
+    fb.innerHTML += `
+      <div style="text-align:right;margin-top:1rem">
+        <button class="btn btn-primary" onclick="${isLast ? 'qqFinish()' : 'qqNext()'}">
+          ${isLast
+            ? '<i class="fas fa-flag-checkered"></i> See Results'
+            : 'Next Question <i class="fas fa-arrow-right"></i>'}
+        </button>
+      </div>`;
+  }
+
+  function qqNext() {
+    qqCurrent++;
+    qqRender();
+  }
+
+  function qqFinish() {
+    document.getElementById('qqProgressFill').style.width = '100%';
+    showScreen('qq-result');
+
+    const pct = Math.round((qqScore / QQ_QUESTIONS.length) * 100);
+    let icon, msg, sub;
+    if (pct === 100) {
+      icon = '🏆'; msg = 'Perfect Score! You are a DigiSakhi Champion!';
+      sub  = 'You answered all 5 questions correctly. You are very well prepared to stay safe online!';
+    } else if (pct >= 60) {
+      icon = '👍'; msg = 'Good Job! You know quite a lot.';
+      sub  = 'You got ' + qqScore + ' out of 5. Review the topics you missed to become even safer online.';
+    } else {
+      icon = '📚'; msg = 'Keep Learning! You are on the right track.';
+      sub  = 'You got ' + qqScore + ' out of 5. Visit the DigiSakhi pages below to learn more — it is free!';
+    }
+
+    document.getElementById('qqResultIcon').textContent = icon;
+    document.getElementById('qqScore').textContent = qqScore + ' / ' + QQ_QUESTIONS.length;
+    document.getElementById('qqResultMsg').textContent = msg;
+    document.getElementById('qqResultSub').textContent = sub;
+  }
+  </script>
+
+  <style>
+  /* ── Quick Quiz page styles ── */
+  #qq-wrap { max-width: 700px; margin: 0 auto; }
+
+  .qq-progress-bar {
+    height: 8px; background: var(--border);
+    border-radius: 4px; overflow: hidden; margin-bottom: 2rem;
+  }
+  .qq-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--purple), #db2777);
+    border-radius: 4px;
+    transition: width .4s ease;
+  }
+
+  .qq-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    min-height: 400px;
+  }
+
+  .qq-screen { display: none; padding: 2.5rem 2rem; }
+  .qq-screen.active { display: block; }
+
+  /* Intro */
+  .qq-intro-icon {
+    font-size: 3.5rem; color: var(--purple);
+    text-align: center; margin-bottom: 1rem;
+  }
+  .qq-card h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: .75rem; }
+  .qq-card > div > p { text-align: center; color: var(--text-light); margin-bottom: 1.5rem; }
+  .qq-intro-list {
+    list-style: none; padding: 0;
+    display: flex; flex-direction: column; gap: .6rem;
+    margin-bottom: 2rem;
+  }
+  .qq-intro-list li {
+    display: flex; align-items: flex-start; gap: .6rem;
+    font-size: .9rem; color: var(--text);
+  }
+  .qq-intro-list li i { color: var(--green); flex-shrink: 0; margin-top: .15rem; }
+  .qq-start-btn { display: flex; margin: 0 auto; }
+
+  /* Question */
+  .qq-topic-badge {
+    display: inline-flex; align-items: center; gap: .4rem;
+    font-size: .75rem; font-weight: 700;
+    padding: .3rem .9rem; border-radius: 50px;
+    margin-bottom: .75rem;
+  }
+  .qq-qnum { font-size: .78rem; color: var(--text-light); margin-bottom: .5rem; }
+  .qq-question-text {
+    font-size: 1.05rem; font-weight: 600; color: var(--dark);
+    margin-bottom: 1.5rem; line-height: 1.55;
+  }
+  .qq-options { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1rem; }
+  .qq-option {
+    display: flex; align-items: flex-start; gap: .75rem;
+    padding: .9rem 1rem; border: 2px solid var(--border);
+    border-radius: 10px; background: #fff;
+    cursor: pointer; text-align: left;
+    font-size: .9rem; font-family: 'Poppins', sans-serif;
+    transition: border-color .15s, background .15s;
+  }
+  .qq-option:hover:not(:disabled) { border-color: var(--purple); background: var(--purple-light); }
+  .qq-option.qq-correct { border-color: #059669; background: #f0fdf4; color: #065f46; }
+  .qq-option.qq-wrong   { border-color: #dc2626; background: #fef2f2; color: #7f1d1d; }
+  .qq-option:disabled { cursor: default; }
+  .qq-opt-letter {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #f3f4f6; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: .78rem; flex-shrink: 0;
+  }
+  .qq-correct .qq-opt-letter { background: #059669; color: #fff; }
+  .qq-wrong   .qq-opt-letter { background: #dc2626; color: #fff; }
+  .qq-opt-text { flex: 1; }
+
+  /* Feedback box */
+  .qq-fb-box {
+    display: flex; align-items: flex-start; gap: .75rem;
+    padding: 1rem 1.25rem; border-radius: 10px; font-size: .88rem;
+    margin-top: .5rem;
+  }
+  .qq-fb-right { background: #f0fdf4; color: #065f46; }
+  .qq-fb-wrong { background: #fef2f2; color: #7f1d1d; }
+  .qq-fb-box i { font-size: 1.1rem; flex-shrink: 0; margin-top: .1rem; }
+  .qq-fb-box strong { display: block; margin-bottom: .25rem; font-size: .95rem; }
+  .qq-fb-box p { margin: 0; line-height: 1.5; }
+
+  /* Result */
+  .qq-result-icon { font-size: 4rem; text-align: center; margin-bottom: .5rem; }
+  .qq-score {
+    font-size: 3.5rem; font-weight: 800; color: var(--purple);
+    text-align: center; line-height: 1;
+  }
+  #qq-result h3 { text-align: center; font-size: 1.3rem; margin: .75rem 0 .4rem; }
+  #qq-result p  { text-align: center; color: var(--text-light); margin-bottom: 1.5rem; }
+  .qq-result-btns {
+    display: flex; gap: 1rem; justify-content: center;
+    flex-wrap: wrap; margin-bottom: 2rem;
+  }
+  .qq-result-links p { font-size: .88rem; color: var(--text-light); margin-bottom: .75rem; }
+  .qq-links-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
+  }
+  .qq-links-grid a {
+    display: flex; align-items: center; gap: .5rem;
+    padding: .65rem 1rem; background: var(--purple-light);
+    color: var(--purple); border-radius: 8px;
+    font-size: .85rem; font-weight: 500;
+    transition: background .2s;
+  }
+  .qq-links-grid a:hover { background: var(--purple); color: #fff; }
+
+  @media (max-width: 600px) {
+    .qq-screen { padding: 1.5rem 1.25rem; }
+    .qq-links-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+
+</body>
+</html>

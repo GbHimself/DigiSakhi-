@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Savitri Devi",
+    "location": "Varanasi, UP",
+    "rating": 5,
+    "section": "Online Safety",
+    "comment": "I learned about OTP scams from this website. Two weeks later I got a fake call and I recognised it immediately and hung up. DigiSakhi saved my money!",
+    "date": "January 2026"
+  },
+  {
+    "name": "Lakshmi Bai",
+    "location": "Nagpur, Maharashtra",
+    "rating": 5,
+    "section": "Mobile Usage",
+    "comment": "The Mobile Usage section is very easy to understand. I am 52 years old and never used WhatsApp properly. Now I run our SHG group on WhatsApp myself.",
+    "date": "January 2026"
+  },
+  {
+    "name": "Fatima Begum",
+    "location": "Hyderabad, Telangana",
+    "rating": 4,
+    "section": "AI Safety",
+    "comment": "The AI Safety section opened my eyes. I did not know that voices could be cloned. I have told all my family members about this.",
+    "date": "December 2025"
+  },
+  {
+    "name": "Kamla Singh",
+    "location": "Patna, Bihar",
+    "rating": 5,
+    "section": "Real Incidents",
+    "comment": "Reading real stories made me understand the danger. I shared DigiSakhi with my entire SHG group of 24 women. Everyone found it very helpful.",
+    "date": "December 2025"
+  },
+  {
+    "name": "Pushpa Kumari",
+    "location": "Jamshedpur, Jharkhand",
+    "rating": 5,
+    "section": "File Complaint",
+    "comment": "When my cousin got scammed I used DigiSakhi to find out how to report it. We called 1930 and filed on cybercrime.gov.in. The money was partially recovered.",
+    "date": "November 2025"
+  },
+  {
+    "name": "Durga Devi",
+    "location": "Kanpur, UP",
+    "rating": 4,
+    "section": "Social Media",
+    "comment": "The WhatsApp safety rules section is excellent. I now know not to forward unverified messages. Very simple language, easy to understand.",
+    "date": "November 2025"
+  }
+]

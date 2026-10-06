@@ -1,0 +1,1055 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media – DigiSakhi</title>
+  <meta name="description" content="Use WhatsApp, Facebook, Instagram safely. Learn how to run SHG groups on WhatsApp, sell products online, and stop fake news. Free guide for women."/>
+  <meta name="keywords" content="WhatsApp safety, Facebook privacy settings, fake news detection, social media women India, SHG WhatsApp group, sell products online"/>
+  <meta name="author" content="DigiSakhi"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://digisakhi2026.netlify.app/social-media.html"/>
+
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://digisakhi2026.netlify.app/social-media.html"/>
+  <meta property="og:title"       content="Social Media – DigiSakhi"/>
+  <meta property="og:description" content="Use WhatsApp and Facebook safely, spot fake news, and use social media to grow your SHG business."/>
+  <meta property="og:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Social Media – DigiSakhi"/>
+  <meta name="twitter:description" content="Safe WhatsApp and Facebook guide for women Self-Help Groups."/>
+  <meta name="twitter:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a></li>
+        <li><a href="social-media.html" class="active"><i class="fas fa-share-nodes"></i> Social Media</a></li>
+        <li><a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a></li>
+        <li><a href="ai-safety.html"><i class="fas fa-robot"></i> AI Safety</a></li>
+        <li><a href="resources.html"><i class="fas fa-hands-helping"></i> Resources</a></li>
+        <li><a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a></li>
+        <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-teal">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="images/hero-bg3.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-icon"><i class="fas fa-share-nodes"></i></div>
+      <h1>Social Media</h1>
+      <p>Use WhatsApp, Facebook, and other platforms safely and smartly to connect with your community.</p>
+    </div>
+  </section>
+
+  <!-- PLATFORM INTRO -->
+  <section class="section" id="platforms">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Popular Platforms</div>
+        <h2>Platforms <span class="highlight">You Should Know</span></h2>
+        <p>Tap on any platform to learn about it and download the app</p>
+      </div>
+
+      <!-- CLICKABLE PLATFORM CARDS -->
+      <div class="platform-grid" id="platformGrid">
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('whatsapp')" data-id="whatsapp">
+          <div class="platform-logo" style="background:#25d366"><i class="fab fa-whatsapp"></i></div>
+          <h4>WhatsApp</h4>
+          <p>Free calls, messages, video calls, and group chats. Most widely used in India for SHG communication.</p>
+          <div class="platform-uses">Best for: SHG Groups, Family, Friends</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('facebook')" data-id="facebook">
+          <div class="platform-logo" style="background:#1877f2"><i class="fab fa-facebook-f"></i></div>
+          <h4>Facebook</h4>
+          <p>Share updates, join community groups, watch videos, and connect with people in your area.</p>
+          <div class="platform-uses">Best for: Community Groups, Information</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('instagram')" data-id="instagram">
+          <div class="platform-logo" style="background:#e1306c"><i class="fab fa-instagram"></i></div>
+          <h4>Instagram</h4>
+          <p>Share photos and short videos. Good for promoting SHG products and handicrafts.</p>
+          <div class="platform-uses">Best for: Product Promotion, Creativity</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('youtube')" data-id="youtube">
+          <div class="platform-logo" style="background:#ff0000"><i class="fab fa-youtube"></i></div>
+          <h4>YouTube</h4>
+          <p>Watch educational videos, cooking tutorials, government scheme explanations, and skills training.</p>
+          <div class="platform-uses">Best for: Learning, Entertainment</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('telegram')" data-id="telegram">
+          <div class="platform-logo" style="background:#229ed9"><i class="fab fa-telegram"></i></div>
+          <h4>Telegram</h4>
+          <p>Like WhatsApp but can have very large groups (up to 2 lakh members). Good for SHG networks.</p>
+          <div class="platform-uses">Best for: Large SHG Networks, Channels</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('gpay')" data-id="gpay">
+          <div class="platform-logo" style="background:#4285f4"><i class="fas fa-rupee-sign"></i></div>
+          <h4>Google Pay</h4>
+          <p>Safe and easy UPI payments, money transfers, and bill payments directly from your phone.</p>
+          <div class="platform-uses">Best for: UPI Payments, Money Transfer</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('snapchat')" data-id="snapchat">
+          <div class="platform-logo" style="background:#fffc00; color:#1a1a1a"><i class="fab fa-snapchat-ghost"></i></div>
+          <h4>Snapchat</h4>
+          <p>Send photos and short videos that disappear after viewing. Popular with young people and teenagers.</p>
+          <div class="platform-uses">Best for: Quick Photos, Stories</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('sharechat')" data-id="sharechat">
+          <div class="platform-logo" style="background:#f96300"><i class="fas fa-share-alt"></i></div>
+          <h4>ShareChat</h4>
+          <p>Indian social media platform in 15 regional languages — Hindi, Tamil, Telugu, Marathi, and more.</p>
+          <div class="platform-uses">Best for: Regional Content, Local Community</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+        <div class="platform-card platform-card-clickable" onclick="openPlatform('twitter')" data-id="twitter">
+          <div class="platform-logo" style="background:#000000"><i class="fab fa-x-twitter"></i></div>
+          <h4>Twitter / X</h4>
+          <p>Share short messages, follow news, government announcements, and important updates in real time.</p>
+          <div class="platform-uses">Best for: News, Government Updates</div>
+          <div class="platform-tap-hint"><i class="fas fa-hand-pointer"></i> Tap to Download</div>
+        </div>
+
+      </div>
+
+      <!-- PLATFORM DETAIL PANEL -->
+      <div class="platform-detail-panel" id="platformDetailPanel" style="display:none">
+        <div class="pdp-inner" id="pdpInner">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHATSAPP GUIDE -->
+  <section class="section" id="whatsapp">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">WhatsApp</div>
+        <h2><i class="fab fa-whatsapp" style="color:#25d366"></i> Using WhatsApp <span class="highlight">Safely</span></h2>
+      </div>
+      <div class="wa-grid">
+        <div class="wa-feature">
+          <div class="wa-icon"><i class="fas fa-users"></i></div>
+          <h4>Creating a SHG Group</h4>
+          <div class="steps-list compact">
+            <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open WhatsApp → Tap the chat icon → New Group</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text"><p>Add members from your contacts</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text"><p>Add a group name and photo, then create</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text"><p>As admin, you can add/remove members and set group rules</p></div></div>
+          </div>
+        </div>
+        <div class="wa-feature">
+          <div class="wa-icon"><i class="fas fa-lock"></i></div>
+          <h4>WhatsApp Privacy Settings</h4>
+          <div class="steps-list compact">
+            <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to Settings → Privacy</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text"><p>Set "Last seen & Online" to <strong>My Contacts</strong></p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text"><p>Set "Profile Photo" to <strong>My Contacts</strong></p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text"><p>Set "About" and "Status" to <strong>My Contacts</strong></p></div></div>
+          </div>
+        </div>
+        <div class="wa-feature">
+          <div class="wa-icon"><i class="fas fa-video"></i></div>
+          <h4>Video Calls</h4>
+          <div class="steps-list compact">
+            <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the chat of the person you want to call</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap the video camera icon at the top</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text"><p>For group video call: Open group → tap Video Call icon</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text"><p>Up to 8 people can join a group video call</p></div></div>
+          </div>
+        </div>
+        <div class="wa-feature">
+          <div class="wa-icon"><i class="fas fa-ban"></i></div>
+          <h4>Blocking &amp; Reporting</h4>
+          <div class="steps-list compact">
+            <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the chat → Tap the three dots (⋮) at the top</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap "Block" to stop messages from that number</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text"><p>Tap "Report" to report to WhatsApp</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text"><p>Also report to Cyber Crime at 1930 if serious</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHATSAPP SAFETY RULES -->
+      <div class="wa-rules">
+        <h3><i class="fas fa-exclamation-triangle"></i> WhatsApp Safety Rules</h3>
+        <div class="rules-grid">
+          <div class="rule-item rule-danger">
+            <i class="fas fa-times-circle"></i>
+            <p>Do NOT forward messages about politics, religion, or unverified news. Check facts at <strong>factcheck.afp.com</strong> or <strong>boomlive.in</strong> first.</p>
+          </div>
+          <div class="rule-item rule-danger">
+            <i class="fas fa-times-circle"></i>
+            <p>Do NOT add unknown people to your personal contacts or SHG group chats.</p>
+          </div>
+          <div class="rule-item rule-danger">
+            <i class="fas fa-times-circle"></i>
+            <p>Do NOT click links sent by unknown numbers, even if they look like government sites.</p>
+          </div>
+          <div class="rule-item rule-safe">
+            <i class="fas fa-check-circle"></i>
+            <p>Enable Two-Step Verification: Settings → Account → Two-step verification → Enable</p>
+          </div>
+          <div class="rule-item rule-safe">
+            <i class="fas fa-check-circle"></i>
+            <p>Turn on "Disappearing Messages" in private chats for extra privacy.</p>
+          </div>
+          <div class="rule-item rule-safe">
+            <i class="fas fa-check-circle"></i>
+            <p>Regularly check which devices are connected to your WhatsApp (Settings → Linked Devices).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACEBOOK SECTION -->
+  <section class="section" id="facebook">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Facebook</div>
+        <h2><i class="fab fa-facebook-f" style="color:#1877f2"></i> Using Facebook <span class="highlight">Safely</span></h2>
+      </div>
+      <div class="fb-grid">
+        <div class="fb-col">
+          <h4><i class="fas fa-cog"></i> Privacy Settings to Change Now</h4>
+          <div class="setting-list">
+            <div class="setting-item">
+              <div class="setting-icon"><i class="fas fa-users"></i></div>
+              <div>
+                <strong>Who can see my posts?</strong>
+                <p>Go to Settings → Privacy → "Who can see your future posts?" → Change to <strong>Friends</strong></p>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-icon"><i class="fas fa-search"></i></div>
+              <div>
+                <strong>Who can find me by phone number?</strong>
+                <p>Settings → Privacy → "Who can look you up using your phone number?" → <strong>Friends</strong></p>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-icon"><i class="fas fa-tag"></i></div>
+              <div>
+                <strong>Review posts you're tagged in</strong>
+                <p>Settings → Timeline and Tagging → "Review posts you're tagged in" → <strong>Turn ON</strong></p>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-icon"><i class="fas fa-eye-slash"></i></div>
+              <div>
+                <strong>Hide personal information</strong>
+                <p>Edit Profile → Remove or hide your phone number, address, and workplace from public view.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fb-col">
+          <h4><i class="fas fa-shopping-basket"></i> Selling SHG Products on Facebook</h4>
+          <p>Facebook is a great free platform to sell your SHG's products like pickles, handicrafts, clothes, and more!</p>
+          <div class="sell-steps">
+            <div class="sell-step"><span>1</span><p>Take clear photos of your product in good lighting</p></div>
+            <div class="sell-step"><span>2</span><p>Open Facebook → Marketplace → Sell → Items for Sale</p></div>
+            <div class="sell-step"><span>3</span><p>Add photos, product name, price, and your location</p></div>
+            <div class="sell-step"><span>4</span><p>Customers will message you on Facebook to buy</p></div>
+            <div class="sell-step"><span>5</span><p>Meet customers in a safe public place for exchange</p></div>
+          </div>
+          <div class="tip-box"><i class="fas fa-lightbulb"></i> Join local Facebook Groups like "Buy &amp; Sell [Your City]" to reach more customers for free!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM GUIDE -->
+  <section class="section bg-light" id="instagram">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Instagram</div>
+        <h2><i class="fab fa-instagram" style="color:#e1306c"></i> Using Instagram <span class="highlight">Safely</span></h2>
+        <p>Instagram is great for promoting SHG products — but your privacy settings must be correct.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT MOCKUP 1: Private Account Setting -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#e1306c,#833ab4)">
+            <i class="fas fa-lock"></i>
+            <div><h4>Set Your Account to Private</h4><p>Stop strangers from downloading your photos</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#e1306c">
+                <i class="fab fa-instagram"></i> <span>Settings &amp; Privacy</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-user-lock"></i> <span>Private Account</span></div>
+                  <div class="sm-toggle on"><span></span></div>
+                </div>
+                <div class="sm-setting-note">✅ When ON — only your approved followers can see your photos and stories</div>
+                <div class="sm-setting-row">
+                  <div class="sm-setting-left"><i class="fas fa-eye"></i> <span>Story Sharing</span></div>
+                  <div class="sm-toggle off"><span></span></div>
+                </div>
+                <div class="sm-setting-note">✅ Turn OFF — prevents others from re-sharing your stories</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>1</span> Open Instagram → tap your profile photo (bottom right)</div>
+            <div class="sm-step"><span>2</span> Tap the three lines (☰) → Settings &amp; Privacy</div>
+            <div class="sm-step"><span>3</span> Tap "Account Privacy" → turn on "Private Account"</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT MOCKUP 2: Fake Shop Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#991b1b)">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div><h4>Spot a Fake Instagram Shop</h4><p>Real example of how scam accounts look</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#e1306c">
+                <i class="fab fa-instagram"></i> <span>@best_saree_deals99</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-profile">
+                  <div class="sm-fake-avatar" style="background:#e1306c"><i class="fas fa-store"></i></div>
+                  <div class="sm-fake-stats">
+                    <div><strong>47</strong><span>posts</span></div>
+                    <div><strong>230</strong><span>followers</span></div>
+                    <div><strong>12</strong><span>following</span></div>
+                  </div>
+                </div>
+                <div class="sm-fake-bio">🛍 Designer Sarees ₹299 only!<br/>📦 All India Delivery<br/>💳 GPay: 98765XXXXX<br/>⚠️ No returns/refunds</div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> RED FLAGS: New account, very few followers, no refund policy, asks for GPay directly</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> Check how old the account is — new = suspicious</div>
+            <div class="sm-step"><span>⚠</span> Very few followers but many posts = fake shop</div>
+            <div class="sm-step"><span>⚠</span> Asking for direct GPay/PhonePe = major red flag</div>
+            <div class="sm-step"><span>✅</span> Only buy from verified (blue tick) accounts or known brands</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT MOCKUP 3: Block & Report -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+            <i class="fas fa-ban"></i>
+            <div><h4>How to Block &amp; Report</h4><p>Remove anyone who makes you uncomfortable</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#833ab4">
+                <i class="fab fa-instagram"></i> <span>Unknown Profile</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-action-menu">
+                  <div class="sm-action-item report"><i class="fas fa-flag"></i> Report</div>
+                  <div class="sm-action-item block"><i class="fas fa-ban"></i> Block</div>
+                  <div class="sm-action-item restrict"><i class="fas fa-eye-slash"></i> Restrict</div>
+                  <div class="sm-action-item copy"><i class="fas fa-link"></i> Copy Profile URL</div>
+                </div>
+                <div class="sm-setting-note">✅ "Restrict" hides their comments from others without them knowing</div>
+                <div class="sm-setting-note">✅ "Block" removes all access — they cannot see your profile</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>1</span> Go to the profile → tap the three dots (…) at top right</div>
+            <div class="sm-step"><span>2</span> Tap "Block" → confirm</div>
+            <div class="sm-step"><span>3</span> Also tap "Report" → select the reason</div>
+            <div class="sm-step"><span>4</span> If blackmail — call 1930 immediately</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TELEGRAM GUIDE -->
+  <section class="section" id="telegram">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Telegram</div>
+        <h2><i class="fab fa-telegram" style="color:#229ed9"></i> Using Telegram <span class="highlight">Safely</span></h2>
+        <p>Telegram is powerful for large SHG networks — but it is also used heavily by scammers. Know the difference.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: Task Scam Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div><h4>Task Earning Scam — Real Example</h4><p>How scammers lure women into Telegram groups</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#229ed9">
+                <i class="fab fa-telegram"></i> <span>💰 Easy Earning Group</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-chat-msg incoming">Welcome! Like 5 YouTube videos and earn ₹150 instantly! 💵</div>
+                <div class="sm-chat-msg incoming">Our members have earned ₹50,000+ this month! 🎉</div>
+                <div class="sm-chat-msg outgoing">How do I join?</div>
+                <div class="sm-chat-msg incoming">Complete first task → Get paid → Then invest ₹2,000 to earn ₹800/day! 🚀</div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> SCAM: Real jobs never ask you to invest money to earn money</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> First payment is bait — they always ask you to invest next</div>
+            <div class="sm-step"><span>⚠</span> "Invest ₹X to earn ₹Y" is ALWAYS a scam — no exceptions</div>
+            <div class="sm-step"><span>✅</span> Real earning opportunities never require you to pay first</div>
+            <div class="sm-step"><span>✅</span> Report to 1930 immediately if you already sent money</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Telegram Privacy Settings -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#229ed9,#0b6ca3)">
+            <i class="fas fa-shield-alt"></i>
+            <div><h4>Telegram Privacy Settings</h4><p>Lock down who can contact you and see your info</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#229ed9">
+                <i class="fab fa-telegram"></i> <span>Privacy &amp; Security</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-phone"></i> <span>Phone Number</span></div>
+                  <div class="sm-badge">Nobody</div>
+                </div>
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-user-plus"></i> <span>Who can add me to groups?</span></div>
+                  <div class="sm-badge">My Contacts</div>
+                </div>
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-eye"></i> <span>Last Seen</span></div>
+                  <div class="sm-badge">Nobody</div>
+                </div>
+                <div class="sm-setting-note">✅ Set "Who can add me to groups" to My Contacts — this stops scammers from adding you to fake earning groups</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>1</span> Open Telegram → tap the three lines (☰) → Settings</div>
+            <div class="sm-step"><span>2</span> Tap Privacy &amp; Security</div>
+            <div class="sm-step"><span>3</span> Set Phone Number → Nobody</div>
+            <div class="sm-step"><span>4</span> Set "Who can add me to groups" → My Contacts</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Fake Channel Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#9333ea,#6b21a8)">
+            <i class="fas fa-user-secret"></i>
+            <div><h4>Fake Government Channels</h4><p>Scammers pretend to be PM Yojana, MNREGA, etc.</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#229ed9">
+                <i class="fab fa-telegram"></i> <span>Channel Info</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-profile">
+                  <div class="sm-fake-avatar" style="background:#f59e0b"><i class="fas fa-flag"></i></div>
+                  <div style="font-size:0.85rem; font-weight:600; margin-top:0.5rem">PM Kisan Yojana Official 🇮🇳</div>
+                </div>
+                <div class="sm-fake-bio">📢 Register now and get ₹6,000 directly to your account!<br/>📋 Send your Aadhaar + Bank details to claim</div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> FAKE: Government never asks for Aadhaar/bank details on Telegram</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> Government channels NEVER ask for Aadhaar on Telegram</div>
+            <div class="sm-step"><span>⚠</span> No official scheme distributes money through Telegram</div>
+            <div class="sm-step"><span>✅</span> Verify schemes only at official govt websites (.gov.in)</div>
+            <div class="sm-step"><span>✅</span> Report fake channels using the Report option in channel info</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE GUIDE -->
+  <section class="section bg-light" id="youtube">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">YouTube</div>
+        <h2><i class="fab fa-youtube" style="color:#ff0000"></i> Using YouTube <span class="highlight">Safely</span></h2>
+        <p>YouTube is India's biggest free learning resource — but watch out for misleading videos and scam ads.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: Scam Ad Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">
+            <i class="fas fa-ad"></i>
+            <div><h4>Recognise Scam Ads on YouTube</h4><p>Fake investment and loan ads target women</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#ff0000">
+                <i class="fab fa-youtube"></i> <span>Ad playing... (0:30)</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#fff3cd; border:1px solid #ffc107; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  🤑 <strong>Earn ₹5,000 daily from home!</strong><br/>
+                  No investment needed. Work just 2 hours.<br/>
+                  Click below to join our WhatsApp group NOW!<br/>
+                  <span style="color:#dc2626">⬇ CLICK TO JOIN ⬇</span>
+                </div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> SCAM AD: Never click WhatsApp links from YouTube ads</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> "Earn from home" ads are almost always scams</div>
+            <div class="sm-step"><span>⚠</span> Never click links from video ads to join WhatsApp groups</div>
+            <div class="sm-step"><span>✅</span> Skip ads using the "Skip Ad" button after 5 seconds</div>
+            <div class="sm-step"><span>✅</span> Report bad ads: tap ⓘ icon on the ad → "Report this ad"</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Safe Search -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#059669,#047857)">
+            <i class="fas fa-graduation-cap"></i>
+            <div><h4>Best Searches for SHG Women</h4><p>Use YouTube as a free skill-learning tool</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#ff0000">
+                <i class="fab fa-youtube"></i> <span>YouTube Search</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-search-suggestions">
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> SHG business ideas Hindi</div>
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> महिला स्वयं सहायता समूह</div>
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> agarbatti making at home</div>
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> pickle making business</div>
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> UPI fraud kaise bachein</div>
+                  <div class="sm-search-item"><i class="fas fa-search" style="color:#aaa"></i> cyber crime se kaise bachen</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>✅</span> Search in your local language for better results</div>
+            <div class="sm-step"><span>✅</span> Look for channels from government (NIC, MyGov, DD News)</div>
+            <div class="sm-step"><span>✅</span> Use "Filters" → "This year" to get recent videos</div>
+            <div class="sm-step"><span>✅</span> Check view count and channel subscribers before trusting</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARECHAT GUIDE -->
+  <section class="section" id="sharechat">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">ShareChat</div>
+        <h2><i class="fas fa-share-alt" style="color:#f96300"></i> Using ShareChat <span class="highlight">Safely</span></h2>
+        <p>ShareChat is a great Indian social media app in regional languages — but fake news spreads fast on it. Know how to spot it.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: ShareChat Fake News -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#f96300,#c2410c)">
+            <i class="fas fa-newspaper"></i>
+            <div><h4>Fake News Spreads Fast on ShareChat</h4><p>Regional language posts are hard to verify</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#f96300">
+                <i class="fas fa-share-alt"></i> <span>ShareChat Feed</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#fef2f2; border:1px solid #fca5a5; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  🚨 <strong>BREAKING: Sarkar dे रही है ₹50,000 free!</strong><br/>
+                  अभी इस link पर click करें और apply करें!<br/>
+                  सिर्फ आज रात तक का मौका! 🕐<br/>
+                  <span style="color:#2563eb; font-size:0.75rem">bit.ly/free-yojana-2024</span>
+                </div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> FAKE: Urgent deadlines + short links = always fake</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> "Only today!" urgency is a scam trick — real schemes have months-long windows</div>
+            <div class="sm-step"><span>⚠</span> Short links (bit.ly, tinyurl) hide where they really go</div>
+            <div class="sm-step"><span>✅</span> Before sharing, verify at factcheck.afp.com or boomlive.in</div>
+            <div class="sm-step"><span>✅</span> Report post: tap three dots → Report → Fake News</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SNAPCHAT GUIDE -->
+  <section class="section bg-light" id="snapchat">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Snapchat</div>
+        <h2><i class="fab fa-snapchat-ghost" style="color:#f5c518"></i> Using Snapchat <span class="highlight">Safely</span></h2>
+        <p>Snapchat photos disappear — but that does NOT mean they are private. Screenshots can be taken.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: Screenshot Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#d97706,#92400e)">
+            <i class="fas fa-camera"></i>
+            <div><h4>"Disappearing" Photos Are Not Safe</h4><p>Anyone can screenshot your snaps</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#f5c518; color:#1a1a1a">
+                <i class="fab fa-snapchat-ghost"></i> <span>Snap from Unknown</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#fef9c3; border:1px solid #fde68a; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  <strong>Notification:</strong><br/>
+                  📸 Someone took a screenshot of your snap!<br/>
+                  <span style="color:#dc2626; font-size:0.8rem">⚠ Once screenshotted, the photo exists forever</span>
+                </div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> Never send personal/private photos on Snapchat to people you don't know in real life</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> "Disappears in 10 seconds" — but screenshots last forever</div>
+            <div class="sm-step"><span>⚠</span> Strangers may use screenshots for blackmail</div>
+            <div class="sm-step"><span>✅</span> Only add people you know personally as Snapchat friends</div>
+            <div class="sm-step"><span>✅</span> Settings → Who Can Contact Me → My Friends only</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Friend Request Warning -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#7f1d1d)">
+            <i class="fas fa-user-times"></i>
+            <div><h4>Fake Friend Requests on Snapchat</h4><p>Romance scammers target women heavily</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#f5c518; color:#1a1a1a">
+                <i class="fab fa-snapchat-ghost"></i> <span>Add Friends</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-profile">
+                  <div class="sm-fake-avatar" style="background:#60a5fa"><i class="fas fa-user-tie"></i></div>
+                  <div>
+                    <div style="font-size:0.85rem; font-weight:600">army_doc_raj99</div>
+                    <div style="font-size:0.75rem; color:#6b7280">Added by Quick Add</div>
+                  </div>
+                </div>
+                <div class="sm-chat-msg incoming" style="font-size:0.8rem">Hello beautiful 😍 You have a lovely smile. Can we be friends?</div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> Strangers complimenting and asking to be friends = first step of romance scam</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> "Quick Add" shows your profile to complete strangers</div>
+            <div class="sm-step"><span>✅</span> Settings → See Me in Quick Add → turn OFF</div>
+            <div class="sm-step"><span>✅</span> Settings → Who Can Contact Me → My Friends</div>
+            <div class="sm-step"><span>✅</span> Never accept requests from people you don't know</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TWITTER/X GUIDE -->
+  <section class="section" id="twitter">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Twitter / X</div>
+        <h2><i class="fab fa-x-twitter"></i> Using Twitter/X <span class="highlight">Safely</span></h2>
+        <p>Good for following government announcements and news — but harassment is very common. Know how to protect yourself.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: Protect Your Tweets -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#374151,#111827)">
+            <i class="fas fa-lock"></i>
+            <div><h4>Protect Your Tweets</h4><p>Make your account private so strangers can't see your posts</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#000">
+                <i class="fab fa-x-twitter"></i> <span>Privacy and Safety</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-lock"></i> <span>Protect your posts</span></div>
+                  <div class="sm-toggle on"><span></span></div>
+                </div>
+                <div class="sm-setting-note">✅ When ON — only your approved followers see your tweets</div>
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-at"></i> <span>Who can tag you in photos?</span></div>
+                  <div class="sm-badge">Only you</div>
+                </div>
+                <div class="sm-setting-row active-setting">
+                  <div class="sm-setting-left"><i class="fas fa-comment"></i> <span>Who can reply to your posts?</span></div>
+                  <div class="sm-badge">Accounts you follow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>1</span> Open X → tap profile picture → Settings &amp; Support</div>
+            <div class="sm-step"><span>2</span> Settings → Privacy and Safety</div>
+            <div class="sm-step"><span>3</span> Turn on "Protect your posts"</div>
+            <div class="sm-step"><span>4</span> Set "Who can reply" → Accounts you follow</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Block Harasser -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#7f1d1d)">
+            <i class="fas fa-ban"></i>
+            <div><h4>How to Block &amp; Mute Harassers</h4><p>Stop unwanted attention quickly</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#000">
+                <i class="fab fa-x-twitter"></i> <span>Post by @unknown_user</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-action-menu">
+                  <div class="sm-action-item block"><i class="fas fa-ban"></i> Block @unknown_user</div>
+                  <div class="sm-action-item restrict"><i class="fas fa-volume-mute"></i> Mute @unknown_user</div>
+                  <div class="sm-action-item report"><i class="fas fa-flag"></i> Report Post</div>
+                  <div class="sm-action-item copy"><i class="fas fa-times"></i> Not Interested</div>
+                </div>
+                <div class="sm-setting-note">✅ Block removes all access. Mute hides their posts silently.</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>1</span> Tap the three dots (…) on any post or profile</div>
+            <div class="sm-step"><span>2</span> Tap "Block" to fully remove them</div>
+            <div class="sm-step"><span>3</span> Tap "Report" → select harassment type</div>
+            <div class="sm-step"><span>✅</span> Follow only verified government &amp; news accounts for safe updates</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GPAY / UPI GUIDE -->
+  <section class="section bg-light" id="gpay">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Google Pay &amp; UPI</div>
+        <h2><i class="fas fa-rupee-sign" style="color:#4285f4"></i> Using UPI &amp; Google Pay <span class="highlight">Safely</span></h2>
+        <p>UPI is India's fastest payment system — but also the most misused by fraudsters. These screenshots show exactly what to watch for.</p>
+      </div>
+
+      <div class="sm-safety-grid">
+
+        <!-- SCREENSHOT: Collect Request Scam -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div><h4>The Collect Request Scam</h4><p>Most common UPI fraud targeting women sellers</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#4285f4">
+                <i class="fas fa-rupee-sign"></i> <span>Google Pay</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#fef2f2; border:2px solid #dc2626; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem">
+                    <span>💳 Payment Request</span>
+                    <span style="color:#dc2626; font-weight:700">PAY ₹1,500</span>
+                  </div>
+                  <div style="color:#6b7280; font-size:0.75rem">From: 98765XXXXX (Buyer)</div>
+                  <div style="color:#6b7280; font-size:0.75rem">"Sending money for saree"</div>
+                  <div style="display:flex; gap:0.5rem; margin-top:0.75rem">
+                    <div style="background:#dc2626; color:#fff; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600">PAY ₹1,500</div>
+                    <div style="background:#e5e7eb; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem">Decline</div>
+                  </div>
+                  <div style="margin-top:0.5rem; color:#dc2626; font-weight:600; font-size:0.78rem">⚠ This button SENDS money — do NOT tap PAY!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> This notification means YOU are being asked to PAY — not receive</div>
+            <div class="sm-step"><span>⚠</span> "Sending money for saree" is a LIE — it's a collect request</div>
+            <div class="sm-step"><span>✅</span> To receive money — you do NOTHING. No notification needed</div>
+            <div class="sm-step"><span>✅</span> Always tap DECLINE on unexpected payment requests</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Safe QR Code -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#059669,#047857)">
+            <i class="fas fa-qrcode"></i>
+            <div><h4>QR Code Safety</h4><p>Scanning the wrong QR code can send your money away</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#4285f4">
+                <i class="fas fa-rupee-sign"></i> <span>Scan QR Code</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#fef9c3; border:1px solid #fde68a; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  <strong>⚠ Before scanning any QR:</strong><br/>
+                  ✅ Check: Shopkeeper's name shown?<br/>
+                  ✅ Check: Is the amount shown before paying?<br/>
+                  ❌ If QR asks for YOUR fingerprint/PIN = fraud<br/>
+                  ❌ If QR was sent on WhatsApp by stranger = fraud
+                </div>
+                <div class="sm-setting-note">✅ Legitimate QR codes only RECEIVE money — they never ask for your PIN to "receive"</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>✅</span> Only scan QR codes at physical shops you can see</div>
+            <div class="sm-step"><span>✅</span> Confirm the merchant name shown matches the shop</div>
+            <div class="sm-step"><span>⚠</span> Never scan QR codes sent to you on WhatsApp or SMS</div>
+            <div class="sm-step"><span>⚠</span> No QR code should ever ask you to enter your UPI PIN to receive money</div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: Fake Cashback Scam -->
+        <div class="sm-guide-card">
+          <div class="sm-guide-header" style="background:linear-gradient(135deg,#9333ea,#6b21a8)">
+            <i class="fas fa-gift"></i>
+            <div><h4>Fake Cashback &amp; Lottery SMS</h4><p>You did NOT win ₹10 lakh on Google Pay</p></div>
+          </div>
+          <div class="sm-screenshot-mockup">
+            <div class="sm-phone-ui">
+              <div class="sm-phone-topbar" style="background:#333">
+                <i class="fas fa-sms"></i> <span>SMS from +91-8888XXXXXX</span>
+              </div>
+              <div class="sm-phone-body">
+                <div class="sm-fake-bio" style="background:#f3f0ff; border:1px solid #c4b5fd; border-radius:8px; padding:0.75rem; font-size:0.82rem">
+                  🎉 Congratulations! Your Google Pay number has won ₹10,00,000 in the Annual Cashback Lucky Draw!<br/><br/>
+                  To claim, send ₹199 processing fee to UPI: claim@ybl<br/><br/>
+                  Offer valid till midnight only! 🕐
+                </div>
+                <div class="sm-warning-label"><i class="fas fa-times-circle"></i> SCAM: Google Pay does NOT run lotteries. Processing fees = fraud</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm-guide-steps">
+            <div class="sm-step"><span>⚠</span> Google Pay, PhonePe, Paytm never announce winners by SMS</div>
+            <div class="sm-step"><span>⚠</span> Any fee to "claim a prize" is a scam — always</div>
+            <div class="sm-step"><span>✅</span> Delete and block the number immediately</div>
+            <div class="sm-step"><span>✅</span> Report to 1930 if you already sent money</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAKE NEWS SECTION -->
+  <section class="section bg-light" id="fakenews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Topic 3</div>
+        <h2><i class="fas fa-newspaper"></i> Stopping <span class="highlight">Fake News</span></h2>
+        <p>Fake news spreads fear and causes harm. Learn how to identify and stop it.</p>
+      </div>
+      <div class="fakenews-grid">
+        <div class="fn-card fn-red">
+          <h4><i class="fas fa-exclamation-circle"></i> Signs of Fake News</h4>
+          <ul>
+            <li>Headlines with "SHOCKING!", "BREAKING!", or "VIRAL"</li>
+            <li>No source or author mentioned</li>
+            <li>Requests you to "Forward to everyone NOW"</li>
+            <li>Creates fear, panic, or strong emotion</li>
+            <li>Very bad grammar and spelling errors</li>
+            <li>Photos that don't match the story</li>
+          </ul>
+        </div>
+        <div class="fn-card fn-green">
+          <h4><i class="fas fa-check-circle"></i> How to Verify News</h4>
+          <ul>
+            <li>Check if the same news is on a known TV channel or newspaper</li>
+            <li>Visit <strong>PIB Fact Check</strong> (pib.gov.in/factcheck) for government news</li>
+            <li>Search the headline on Google to find multiple sources</li>
+            <li>Check the date — old news is sometimes shared as current</li>
+            <li>Reverse image search photos on Google Images</li>
+            <li>If unsure, do NOT forward — silence is safer</li>
+          </ul>
+        </div>
+        <div class="fn-card fn-blue">
+          <h4><i class="fas fa-gavel"></i> Legal Consequences</h4>
+          <ul>
+            <li>Forwarding fake news is a criminal offence in India</li>
+            <li>You can be arrested even if you did not create the news</li>
+            <li>Penalties include fines and jail time under IT Act</li>
+            <li>Fake news about COVID, religion, or elections is especially serious</li>
+          </ul>
+          <div class="warning-box" style="margin-top:1rem"><i class="fas fa-gavel"></i> When in doubt, <strong>DON'T</strong> forward. Think before you share.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHG DIGITAL TIPS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">For SHG Groups</div>
+        <h2>Using Digital Tools for Your <span class="highlight">SHG</span></h2>
+      </div>
+      <div class="shg-tips-grid">
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fab fa-whatsapp"></i></div>
+          <h4>Run Group Meetings on WhatsApp</h4>
+          <p>Create a WhatsApp group for your SHG. Share meeting dates, minutes of meetings, loan records, and announcements instantly with all members.</p>
+        </div>
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fas fa-rupee-sign"></i></div>
+          <h4>Collect Savings via UPI</h4>
+          <p>Members can send their monthly savings directly via UPI (GPay/PhonePe) to the group leader. No need to meet physically for collection.</p>
+        </div>
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fab fa-youtube"></i></div>
+          <h4>Learn New Skills on YouTube</h4>
+          <p>Search YouTube for free tutorials on making pickles, stitching, making candles, cooking, and many other income-generating skills.</p>
+        </div>
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fas fa-store"></i></div>
+          <h4>Sell Products Online</h4>
+          <p>Use WhatsApp Business, Facebook Marketplace, or Instagram to promote and sell your SHG products to customers in and around your area.</p>
+        </div>
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fas fa-file-alt"></i></div>
+          <h4>Access Government Schemes</h4>
+          <p>Use your smartphone to check and apply for government schemes on the official DigiLocker, Jan Dhan, and NRLM portals.</p>
+        </div>
+        <div class="shg-tip">
+          <div class="shg-tip-icon"><i class="fas fa-photo-video"></i></div>
+          <h4>Document Your Work</h4>
+          <p>Take photos and videos of your SHG's activities and products. This helps you apply for government awards and recognition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPLINE STRIP -->
+  <div class="helpline-strip">
+    <div class="container">
+      <div class="helpline-content">
+        <i class="fas fa-phone-alt pulse"></i>
+        <strong>Emergency Helplines:</strong>
+        <span>Women Helpline: <a href="tel:1091">1091</a></span>
+        <span>Cyber Crime: <a href="tel:1930">1930</a></span>
+        <span>Police: <a href="tel:100">100</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span></a>
+          <p>Empowering women through digital literacy.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-chevron-right"></i> Online Safety</a></li>
+            <li><a href="social-media.html"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+            <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Emergency Contacts</h4>
+          <div class="emergency-list">
+            <div class="emergency-item"><i class="fas fa-phone"></i><span>Women Helpline</span><strong>1091</strong></div>
+            <div class="emergency-item"><i class="fas fa-laptop"></i><span>Cyber Crime</span><strong>1930</strong></div>
+            <div class="emergency-item"><i class="fas fa-shield-alt"></i><span>Police</span><strong>100</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <a href="admin.html" style="color:inherit;text-decoration:none;" title="">2026</a> DigiSakhi. Made with <i class="fas fa-heart" style="color:#f472b6"></i> for Women of India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

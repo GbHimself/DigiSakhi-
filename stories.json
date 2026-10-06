@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Sunita Devi",
+    "location": "Patna, Bihar",
+    "platform": "WhatsApp",
+    "platformIcon": "fab fa-whatsapp",
+    "platformColor": "#25d366",
+    "badge": "OTP Scam",
+    "story": "I got a call from someone saying they were from my bank. They said my account would be blocked and asked for the OTP I just received. I shared it and within minutes ₹18,000 was gone from my account. I called 1930 immediately and they froze the account. I got back ₹12,000.",
+    "outcome": "Lost ₹18,000 — recovered ₹12,000 via 1930",
+    "lesson": "Real banks NEVER ask for OTP on phone. Hang up immediately and call your bank directly.",
+    "date": "January 2026"
+  },
+  {
+    "name": "Rekha Kumari",
+    "location": "Jaipur, Rajasthan",
+    "platform": "Telegram",
+    "platformIcon": "fab fa-telegram",
+    "platformColor": "#229ed9",
+    "badge": "Fake Job Scam",
+    "story": "I was added to a Telegram group promising ₹500-1000 per day for simple tasks like liking YouTube videos. At first I got small payments to build trust. Then they asked me to invest ₹5,000 to unlock bigger tasks. I paid and they disappeared with the group.",
+    "outcome": "Lost ₹5,000 — group deleted",
+    "lesson": "No real job pays you for liking videos. Any 'task' that requires you to invest money first is a scam.",
+    "date": "December 2025"
+  },
+  {
+    "name": "Priya Sharma",
+    "location": "Lucknow, UP",
+    "platform": "Instagram",
+    "platformIcon": "fab fa-instagram",
+    "platformColor": "#e1306c",
+    "badge": "Morphed Photo Blackmail",
+    "story": "Someone sent me a message saying they had edited my profile photo and would send it to my family and SHG group unless I paid ₹10,000. I was scared but my daughter told me not to pay. We reported to cybercrime.gov.in and called 1930. The person was traced.",
+    "outcome": "Reported to 1930 — scammer traced by police",
+    "lesson": "NEVER pay a blackmailer. Report immediately to 1930. Paying once leads to more demands.",
+    "date": "November 2025"
+  },
+  {
+    "name": "Anita Patel",
+    "location": "Surat, Gujarat",
+    "platform": "Facebook",
+    "platformIcon": "fab fa-facebook-f",
+    "platformColor": "#1877f2",
+    "badge": "Fake Romance Scam",
+    "story": "A man contacted me on Facebook saying he was an army officer posted abroad. After 3 months of chatting he said he needed ₹25,000 for medical emergency. I sent money twice thinking he was genuine. He then stopped responding.",
+    "outcome": "Lost ₹52,000 — no recovery",
+    "lesson": "Never send money to someone you have only met online, no matter how long you have known them.",
+    "date": "October 2025"
+  },
+  {
+    "name": "Meena Devi",
+    "location": "Ranchi, Jharkhand",
+    "platform": "WhatsApp",
+    "platformIcon": "fab fa-whatsapp",
+    "platformColor": "#25d366",
+    "badge": "AI Voice Clone Scam",
+    "story": "I got a call that sounded exactly like my son saying he had an accident and needed ₹30,000 urgently. I was about to transfer when my neighbour asked me to call my son directly first. He was safe at home. The voice was AI-generated.",
+    "outcome": "No money lost — stopped in time",
+    "lesson": "Always hang up and call back on the person's saved number before sending any money.",
+    "date": "September 2025"
+  }
+]

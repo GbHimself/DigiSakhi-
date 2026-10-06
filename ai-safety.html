@@ -1,0 +1,750 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Safety &amp; Awareness – DigiSakhi</title>
+  <meta name="description" content="Learn how AI can help and harm women. See real victim text messages, understand deepfake and voice clone dangers, and get protection tips."/>
+  <meta name="keywords" content="AI safety women India, deepfake scam, voice clone fraud, AI romance scam, AI awareness SHG"/>
+  <meta name="author" content="DigiSakhi"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://digisakhi2026.netlify.app/ai-safety.html"/>
+
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://digisakhi2026.netlify.app/ai-safety.html"/>
+  <meta property="og:title"       content="AI Safety &amp; Awareness – DigiSakhi"/>
+  <meta property="og:description" content="How AI can help and harm women. Real victim examples and protection tips."/>
+  <meta property="og:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="AI Safety &amp; Awareness – DigiSakhi"/>
+  <meta name="twitter:description" content="AI dangers for women — deepfakes, voice cloning, romance scams. Learn to protect yourself."/>
+  <meta name="twitter:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a></li>
+        <li><a href="social-media.html"><i class="fas fa-share-nodes"></i> Social Media</a></li>
+        <li><a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a></li>
+        <li><a href="ai-safety.html" class="active"><i class="fas fa-robot"></i> AI Safety</a></li>
+        <li><a href="resources.html"><i class="fas fa-hands-helping"></i> Resources</a></li>
+        <li><a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a></li>
+        <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background:linear-gradient(135deg,#5b21b6,#8b5cf6)">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="images/hero-bg1.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-icon"><i class="fas fa-robot"></i></div>
+      <h1>AI Safety &amp; Awareness</h1>
+      <p>Artificial intelligence can be a helpful tool — but it is also being misused to cheat, blackmail, and harm women. Know both sides.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="section bg-light">
+    <div class="container">
+
+      <!-- AI TABS -->
+      <div class="ai-tabs" id="aiTabs">
+        <button class="ai-tab active" onclick="switchAiTab('helpful')" data-ai="helpful">
+          <i class="fas fa-heart"></i> AI Helping Women
+        </button>
+        <button class="ai-tab" onclick="switchAiTab('dangerous')" data-ai="dangerous">
+          <i class="fas fa-exclamation-triangle"></i> AI Dangers
+        </button>
+        <button class="ai-tab" onclick="switchAiTab('victim-messages')" data-ai="victim-messages">
+          <i class="fas fa-mobile-alt"></i> Real Victim Messages
+        </button>
+        <button class="ai-tab" onclick="switchAiTab('protection')" data-ai="protection">
+          <i class="fas fa-shield-alt"></i> How to Protect
+        </button>
+      </div>
+
+      <!-- ---- TAB 1: AI HELPING WOMEN ---- -->
+      <div class="ai-panel active" id="ai-helpful">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <h3>Ways AI Makes Life Easier for Women</h3>
+          <p style="color:var(--text-light)">These are real, free tools available on your phone right now.</p>
+        </div>
+        <div class="ai-helpful-grid">
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#059669"><i class="fas fa-language"></i></div>
+            <h4>Language Translation</h4>
+            <p>Google Translate and voice apps help you understand messages in different languages, making communication easier for SHG members across India.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Try: Google Translate app — free on Play Store</div>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#2563eb"><i class="fas fa-microphone"></i></div>
+            <h4>Voice to Text</h4>
+            <p>WhatsApp voice messages can be converted to text, helping you understand messages even in noisy environments or when you cannot play audio.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Try: Hold the microphone icon on your keyboard to type by speaking</div>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#7c3aed"><i class="fas fa-camera"></i></div>
+            <h4>Google Lens — Smart Search</h4>
+            <p>Point your camera at any text, product, plant, or medicine to instantly get information. Very useful for SHG members checking product prices or reading labels.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Try: Open Google app → tap the camera icon</div>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#ea580c"><i class="fas fa-rupee-sign"></i></div>
+            <h4>AI in Banking Apps</h4>
+            <p>Banking apps use AI to detect suspicious transactions and alert you instantly. They also show spending patterns to help you manage your SHG budget better.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Enable transaction alerts in your banking app settings</div>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#db2777"><i class="fas fa-stethoscope"></i></div>
+            <h4>Health Information</h4>
+            <p>Apps like Practo and mFine use AI to help you understand symptoms, find nearby doctors, and get basic health guidance — helpful in rural areas with limited access.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Try: Practo or 1mg app — free to use</div>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#0d9488"><i class="fas fa-graduation-cap"></i></div>
+            <h4>Learning &amp; Skills</h4>
+            <p>YouTube's AI recommends free tutorials in your language for skills like stitching, cooking, farming, and small business — helping SHG women grow their income.</p>
+            <div class="ai-help-tip"><i class="fas fa-mobile-alt"></i> Search YouTube: "SHG business ideas Hindi" for free videos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- TAB 2: AI DANGERS ---- -->
+      <div class="ai-panel" id="ai-dangerous">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <h3>How Criminals Misuse AI Against Women</h3>
+          <p style="color:var(--text-light)">These are real crimes happening across India right now — with screenshots showing exactly what they look like. Knowing them protects you.</p>
+        </div>
+
+        <div class="aid-grid">
+
+          <!-- ---- 1. DEEPFAKE VIDEOS ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#dc2626,#7f1d1d)">
+              <div class="aid-badge">AI DANGER #1</div>
+              <i class="fas fa-user-secret aid-icon"></i>
+              <h4>Deepfake Videos</h4>
+              <p>AI places your face on someone else's body — looks completely real</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- Screen showing a video player with "AI GENERATED" warning overlay -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#1e1b4b">
+                  <i class="fas fa-photo-video"></i>
+                  <span>Video Player</span>
+                  <span class="aid-screen-time">0:08 / 0:47</span>
+                </div>
+                <div class="aid-screen-body aid-video-player">
+                  <div class="aid-video-frame">
+                    <div class="aid-video-face">
+                      <div class="aid-face-circle">
+                        <i class="fas fa-user" style="font-size:2rem;color:#fff;opacity:0.6"></i>
+                      </div>
+                      <div class="aid-glitch-bar"></div>
+                      <div class="aid-glitch-bar aid-glitch-2"></div>
+                    </div>
+                    <div class="aid-ai-watermark">AI GENERATED</div>
+                  </div>
+                  <div class="aid-video-controls">
+                    <div class="aid-progress-bar"><div class="aid-progress-fill"></div></div>
+                    <div class="aid-vc-row">
+                      <i class="fas fa-pause"></i>
+                      <span style="font-size:0.7rem;color:#aaa">0:08 / 0:47</span>
+                      <i class="fas fa-volume-up" style="margin-left:auto"></i>
+                    </div>
+                  </div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Scammer sends this to victim: "Pay ₹50,000 or I share this with your family"
+                  </div>
+                </div>
+              </div>
+              <!-- Signs to spot deepfakes -->
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-eye"></i> How to Spot It</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Face edges look blurry or unnatural</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Blinking looks wrong or missing</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Lighting on face differs from background</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Lip movement does not match the words</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Bengaluru 2025:</strong> A woman's face was placed on an inappropriate video using a free AI app. She was blackmailed for ₹50,000. When she paid, demands doubled to ₹1 lakh. She finally reported to cybercrime.gov.in — accused arrested in 18 days.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Never pay. Report to 1930 immediately. Police can trace the source.</span>
+            </div>
+          </div>
+
+          <!-- ---- 2. VOICE CLONING ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#e11d48,#9f1239)">
+              <div class="aid-badge">AI DANGER #2</div>
+              <i class="fas fa-microphone-slash aid-icon"></i>
+              <h4>Voice Cloning</h4>
+              <p>AI copies a person's voice from just 10 seconds of recording</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- Phone call showing cloned voice -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#e11d48">
+                  <i class="fas fa-phone-volume"></i>
+                  <span>Incoming Call</span>
+                  <span class="aid-screen-time">+91 98765XXXXX</span>
+                </div>
+                <div class="aid-screen-body">
+                  <div class="aid-call-ui">
+                    <div class="aid-call-avatar" style="background:#c084fc">M</div>
+                    <div class="aid-call-name">Mom</div>
+                    <div class="aid-call-duration">00:43</div>
+                    <div class="aid-call-wave">
+                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="aid-transcript-box">
+                    <div class="aid-tb-label">Audio Transcript (AI Voice)</div>
+                    <div class="aid-tb-text">"Beta... main accident mein hun 😢 Hospital mein hun. Turant ₹25,000 GPay karo. Kisi ko mat batana..."</div>
+                  </div>
+                  <div class="aid-ai-label-bar"><i class="fas fa-robot"></i> This voice was AI-generated from a 12-second wedding video clip</div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Son transferred ₹25,000 before calling real mother — who was safely at home
+                  </div>
+                </div>
+              </div>
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-ear-listen"></i> How to Spot It</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Voice sounds slightly robotic or flat</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> No background noise — too clean</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Refuses video call — "camera not working"</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Hang up — call back on saved number</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Hyderabad 2025:</strong> AI cloned a mother's voice from a 12-second public video. The son transferred ₹25,000 before calling his real mother. Called 1930 — partial recovery of ₹18,000 achieved.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Always hang up and call back on the person's saved number before sending any money.</span>
+            </div>
+          </div>
+
+          <!-- ---- 3. MORPHED PHOTOS ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#9333ea,#6b21a8)">
+              <div class="aid-badge">AI DANGER #3</div>
+              <i class="fas fa-image aid-icon"></i>
+              <h4>Morphed &amp; Fake Photos</h4>
+              <p>AI creates inappropriate fake images from your normal photos</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- WhatsApp blackmail message -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#25d366">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>Unknown Number</span>
+                  <span class="aid-screen-time">11:05 AM</span>
+                </div>
+                <div class="aid-screen-body">
+                  <div class="aid-chat-msg aid-in">
+                    I have your photos from Instagram. I used AI to make "special" edits. 😈<br/><br/>
+                    Send ₹10,000 to <span style="color:#2563eb">9876XXXXX@ybl</span> within 2 hours OR I send these to your college group and parents.<br/><br/>
+                    <span style="font-size:0.72rem;color:#6b7280">Delivered 11:05 AM ✓✓</span>
+                  </div>
+                  <div class="aid-morphed-preview">
+                    <div class="aid-img-original">
+                      <i class="fas fa-user-circle"></i>
+                      <span>Original photo from Instagram</span>
+                    </div>
+                    <div class="aid-arrow-right"><i class="fas fa-arrow-right"></i><span style="font-size:0.65rem">AI app</span></div>
+                    <div class="aid-img-morphed">
+                      <i class="fas fa-ban"></i>
+                      <span>Fake morphed image</span>
+                    </div>
+                  </div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    NEVER pay. Paying once leads to demands every week — forever.
+                  </div>
+                </div>
+              </div>
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-shield-alt"></i> Protect Yourself Now</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Set Instagram &amp; Facebook to Private</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Delete old public photo albums</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Never pay — report to 1930 instead</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Screenshot all threats as evidence first</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Pune 2024:</strong> College student's public Instagram photos were morphed using a free AI app. She paid ₹28,000 total before reporting. Accused arrested within 3 weeks. Case filed under IT Act Sec.67A.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Do NOT pay. Take screenshots of all messages and report at cybercrime.gov.in → Women/Child Crime → Morphed Images.</span>
+            </div>
+          </div>
+
+          <!-- ---- 4. AI CHATBOT ROMANCE ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#f59e0b,#b45309)">
+              <div class="aid-badge">AI DANGER #4</div>
+              <i class="fas fa-robot aid-icon"></i>
+              <h4>AI Chatbot "Boyfriends"</h4>
+              <p>AI poses as a caring man for weeks, then demands money</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- Facebook chat showing AI romance pattern -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#1877f2">
+                  <i class="fab fa-facebook-messenger"></i>
+                  <span>Capt. Arjun Singh</span>
+                  <span class="aid-screen-time">Active now</span>
+                </div>
+                <div class="aid-screen-body">
+                  <div class="aid-timeline-label">Week 1</div>
+                  <div class="aid-chat-msg aid-in">Good morning beautiful ❤️ I think about you every day at the border.</div>
+                  <div class="aid-timeline-label">Week 4</div>
+                  <div class="aid-chat-msg aid-in">I love you. You are the only reason I am still working this hard.</div>
+                  <div class="aid-timeline-label">Week 6 — The ask</div>
+                  <div class="aid-chat-msg aid-in" style="border:2px solid #dc2626">
+                    I have been injured 😢 Hospital needs ₹35,000 for surgery. I have no one else. Please help me just this once. I will repay you when I come home next month ❤️
+                  </div>
+                  <div class="aid-ai-label-bar"><i class="fas fa-robot"></i> This entire conversation was an AI chatbot — no real person existed</div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    The profile photo was AI-generated. The "army officer" never existed.
+                  </div>
+                </div>
+              </div>
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-eye"></i> Warning Signs</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Refuses live video call — always excuses</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Falls in love extremely fast</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Claims to be army / doctor / NRI abroad</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> First money request = guaranteed scam</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Jaipur 2025:</strong> SHG member chatted with an "army doctor" for 2 months. Sent ₹80,000 total believing he would come and marry her. A friend recognised the AI profile photo pattern. Case filed — no recovery possible.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Never send money to anyone you have only met online — no matter how long you have chatted or how much they say they love you.</span>
+            </div>
+          </div>
+
+          <!-- ---- 5. AI TASK SCAM ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#0d9488,#115e59)">
+              <div class="aid-badge">AI DANGER #5</div>
+              <i class="fas fa-tasks aid-icon"></i>
+              <h4>AI-Powered Task Earning Scam</h4>
+              <p>AI shows fake wallet balance to make you invest more money</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- Fake task app screenshot -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#0d9488">
+                  <i class="fas fa-wallet"></i>
+                  <span>EarnTask Pro — My Wallet</span>
+                  <span class="aid-screen-time">Dashboard</span>
+                </div>
+                <div class="aid-screen-body">
+                  <div class="aid-wallet-ui">
+                    <div class="aid-wallet-balance">
+                      <span class="aid-bal-label">Available Balance</span>
+                      <span class="aid-bal-amount">₹1,84,250</span>
+                      <span class="aid-bal-note">Earned from 142 completed tasks</span>
+                    </div>
+                    <div class="aid-wallet-btn">Withdraw ₹1,84,250</div>
+                  </div>
+                  <!-- Withdrawal error screen -->
+                  <div class="aid-error-popup">
+                    <i class="fas fa-exclamation-circle" style="color:#dc2626"></i>
+                    <div>
+                      <strong>Withdrawal Failed</strong><br/>
+                      <span style="font-size:0.72rem">You must pay ₹18,000 "Income Tax" before withdrawal can be processed.</span>
+                    </div>
+                  </div>
+                  <div class="aid-ai-label-bar"><i class="fas fa-robot"></i> This balance is 100% fake — generated by AI to trick you into paying more</div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    After paying the "tax", the app asks for more fees — then disappears
+                  </div>
+                </div>
+              </div>
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-eye"></i> How to Spot It</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Cannot withdraw without paying a fee first</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Balance grows impossibly fast</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Found only on Telegram / WhatsApp — not Play Store</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> "Tax" / "security deposit" to unlock withdrawal</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Hyderabad 2025:</strong> SHG leader saw ₹1.8 lakh in her task app balance. When she tried withdrawing, it asked for a ₹20,000 "tax fee." She paid. App asked for ₹35,000 more "insurance." She paid again. App disappeared. Total lost: ₹2,00,000.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Any app that asks you to PAY to withdraw your own earnings is a 100% scam. Close it immediately and call 1930.</span>
+            </div>
+          </div>
+
+          <!-- ---- 6. AI FAKE IDENTITY DOCUMENTS ---- -->
+          <div class="aid-card">
+            <div class="aid-header" style="background:linear-gradient(135deg,#2563eb,#1e40af)">
+              <div class="aid-badge">AI DANGER #6</div>
+              <i class="fas fa-id-card aid-icon"></i>
+              <h4>AI Fake Identity Documents</h4>
+              <p>AI generates fake Aadhaar, PAN, police IDs in seconds</p>
+            </div>
+            <div class="aid-screenshot-wrap">
+              <!-- Fake Aadhaar card being sent over WhatsApp -->
+              <div class="aid-screen">
+                <div class="aid-screen-bar" style="background:#25d366">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>Capt. Raj Kumar</span>
+                  <span class="aid-screen-time">9:14 AM</span>
+                </div>
+                <div class="aid-screen-body">
+                  <div class="aid-chat-msg aid-in">Here is my official Aadhaar card to prove I am real. You can trust me now 😊</div>
+                  <!-- Fake Aadhaar card mockup -->
+                  <div class="aid-fake-doc">
+                    <div class="aid-doc-header">
+                      <div class="aid-doc-logo">🇮🇳</div>
+                      <div>
+                        <div style="font-size:0.65rem;font-weight:700;color:#1e40af">AADHAAR</div>
+                        <div style="font-size:0.55rem;color:#6b7280">Unique Identification Authority of India</div>
+                      </div>
+                    </div>
+                    <div class="aid-doc-body">
+                      <div class="aid-doc-avatar"><i class="fas fa-user"></i></div>
+                      <div class="aid-doc-info">
+                        <div style="font-weight:700;font-size:0.75rem">Raj Kumar Singh</div>
+                        <div style="font-size:0.65rem;color:#6b7280">DOB: 12/08/1990</div>
+                        <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;margin-top:0.3rem">XXXX XXXX 7823</div>
+                      </div>
+                    </div>
+                    <div class="aid-doc-warning">⚠️ AI-GENERATED — This document is fake</div>
+                  </div>
+                  <div class="aid-red-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Anyone who sends an ID "very quickly" has it ready because it is AI-generated
+                  </div>
+                </div>
+              </div>
+              <div class="aid-spot-signs">
+                <div class="aid-spot-title"><i class="fas fa-search"></i> How to Verify</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Verify Aadhaar at uidai.gov.in → Verify Aadhaar</div>
+                <div class="aid-spot-item good"><i class="fas fa-check"></i> Ask for a VIDEO call showing the ID in hand</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Flat photo of ID = easily faked with AI</div>
+                <div class="aid-spot-item bad"><i class="fas fa-times"></i> Sent very quickly = already prepared = fake</div>
+              </div>
+            </div>
+            <div class="aid-case">
+              <i class="fas fa-exclamation-circle"></i>
+              <div><strong>Real Case — Delhi 2025:</strong> A woman was shown a fake Aadhaar card and "police ID" by an online friend. She trusted him and sent ₹45,000. When she tried to verify the Aadhaar number at uidai.gov.in, it showed a completely different person's name.</div>
+            </div>
+            <div class="aid-action">
+              <span class="aid-action-do"><i class="fas fa-check"></i> Always verify Aadhaar at uidai.gov.in. A photo of an ID card means nothing — demand a live video call instead.</span>
+            </div>
+          </div>
+
+        </div><!-- end aid-grid -->
+      </div>
+
+      <!-- ---- TAB 3: REAL VICTIM MESSAGES ---- -->
+      <div class="ai-panel" id="ai-victim-messages">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <h3>Real Messages Victims Received</h3>
+          <p style="color:var(--text-light)">These recreate real conversations from documented AI scam cases. See exactly how scammers talk so you can recognise it immediately.</p>
+        </div>
+
+        <div class="ai-messages-grid">
+
+          <!-- MESSAGE 1: Voice Clone -->
+          <div class="ai-message-card">
+            <div class="ai-message-header">
+              <div class="ai-message-type"><i class="fab fa-whatsapp"></i> WhatsApp Voice Clone Scam</div>
+              <div class="ai-message-location"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</div>
+            </div>
+            <div class="ai-message-screenshot">
+              <div class="ai-fake-whatsapp">
+                <div class="ai-whatsapp-header">
+                  <div class="ai-chat-avatar" style="background:#c084fc">M</div>
+                  <div>
+                    <span class="ai-chat-name">Mom</span>
+                    <span class="ai-chat-status">Online</span>
+                  </div>
+                </div>
+                <div class="ai-chat-body">
+                  <div class="ai-msg ai-msg-incoming">
+                    <div class="ai-voice-msg"><i class="fas fa-microphone"></i><span class="ai-voice-bar"></span><span>0:45</span></div>
+                    <span class="ai-msg-time">2:34 PM</span>
+                  </div>
+                  <div class="ai-msg-transcript">"Beta, main accident mein hun. Hospital mein admit hai. Turant ₹25,000 bhej do Google Pay pe. Kisi ko mat batana, main dar rahi hun."</div>
+                  <div class="ai-msg ai-msg-outgoing">Mummy? Aapki awaaz thodi ajeeb lag rahi hai...<span class="ai-msg-time">2:35 PM</span></div>
+                  <div class="ai-msg ai-msg-incoming">
+                    <div class="ai-voice-msg"><i class="fas fa-microphone"></i><span class="ai-voice-bar"></span><span>0:32</span></div>
+                    <span class="ai-msg-time">2:35 PM</span>
+                  </div>
+                  <div class="ai-msg-transcript">"Haan beta, main bahut pareshan hun. Phone ki battery khatam hone wali hai. Jaldi bhej do."</div>
+                  <div class="ai-msg ai-msg-outgoing">Transfer kar diya Mummy. ₹25,000. Please safe raho.<span class="ai-msg-time">2:37 PM</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="ai-message-outcome">
+              <i class="fas fa-exclamation-circle"></i>
+              <div>
+                <strong>What happened:</strong> Son transferred ₹25,000 before calling his real mother, who was safely at home watching TV. Voice was cloned from a family wedding video.
+                <br/><strong>Red flag missed:</strong> Slightly robotic voice quality. No video call offered. Urgency + secrecy request.
+              </div>
+            </div>
+          </div>
+
+          <!-- MESSAGE 2: AI Romance Scam -->
+          <div class="ai-message-card">
+            <div class="ai-message-header">
+              <div class="ai-message-type"><i class="fab fa-facebook-messenger"></i> Facebook AI Romance Scam</div>
+              <div class="ai-message-location"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</div>
+            </div>
+            <div class="ai-message-screenshot">
+              <div class="ai-fake-whatsapp" style="border-top:3px solid #1877f2">
+                <div class="ai-whatsapp-header" style="background:#1877f2">
+                  <div class="ai-chat-avatar" style="background:#60a5fa">A</div>
+                  <div>
+                    <span class="ai-chat-name">Capt. Arjun Singh (Army)</span>
+                    <span class="ai-chat-status">Active now</span>
+                  </div>
+                </div>
+                <div class="ai-chat-body">
+                  <div class="ai-msg ai-msg-incoming">Good morning beautiful ❤️ I think about you every day at the border.<span class="ai-msg-time">9:02 AM</span></div>
+                  <div class="ai-msg ai-msg-outgoing">Good morning! Stay safe ™<span class="ai-msg-time">9:15 AM</span></div>
+                  <div class="ai-msg ai-msg-incoming">I have applied for 15 days leave. I want to meet you and bring gifts from Kashmir. You deserve everything.<span class="ai-msg-time">9:18 AM</span></div>
+                  <div class="ai-msg ai-msg-incoming">But there is a problem... Customs is holding my package. They want ₹12,000 clearance fee. I am embarrassed to ask but I have no one else 😢<span class="ai-msg-time">9:21 AM</span></div>
+                  <div class="ai-msg ai-msg-outgoing">Don't worry, I will send it now. You are coming to meet me after all.<span class="ai-msg-time">9:25 AM</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="ai-message-outcome">
+              <i class="fas fa-exclamation-circle"></i>
+              <div>
+                <strong>What happened:</strong> The "captain" was an AI chatbot. After ₹12,000, he asked for ₹18,000 more for "hospital fees." The woman had sent ₹47,000 before her daughter found out.
+                <br/><strong>Red flag missed:</strong> Never video called. Always had an excuse. Profile photos were AI-generated stock images.
+              </div>
+            </div>
+          </div>
+
+          <!-- MESSAGE 3: Deepfake Blackmail -->
+          <div class="ai-message-card">
+            <div class="ai-message-header">
+              <div class="ai-message-type"><i class="fab fa-instagram"></i> Instagram Deepfake Blackmail</div>
+              <div class="ai-message-location"><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</div>
+            </div>
+            <div class="ai-message-screenshot">
+              <div class="ai-fake-whatsapp" style="border-top:3px solid #e1306c">
+                <div class="ai-whatsapp-header" style="background:linear-gradient(90deg,#833ab4,#e1306c)">
+                  <div class="ai-chat-avatar" style="background:#f9a8d4">?</div>
+                  <div>
+                    <span class="ai-chat-name">Unknown Number</span>
+                    <span class="ai-chat-status">+91 98765 XXXXX</span>
+                  </div>
+                </div>
+                <div class="ai-chat-body">
+                  <div class="ai-msg ai-msg-incoming">I have your photos from Instagram. I have made some "special" edits. If you don't send ₹10,000 today, I will share them in your college group and send to your parents.<span class="ai-msg-time">11:05 AM</span></div>
+                  <div class="ai-msg ai-msg-incoming">You have 2 hours. Google Pay: 98765XXXXX<span class="ai-msg-time">11:06 AM</span></div>
+                  <div class="ai-msg ai-msg-outgoing">Please don't do this. I am sending.<span class="ai-msg-time">11:48 AM</span></div>
+                  <div class="ai-msg ai-msg-incoming">Good. Now send ₹15,000 more by tonight or I will share them anyway.<span class="ai-msg-time">12:30 PM</span></div>
+                  <div class="ai-blackmail-warning">⚠️️ STOP — Never pay. Report immediately to cybercrime.gov.in or call 1930. Paying always leads to more demands.</div>
+                </div>
+              </div>
+            </div>
+            <div class="ai-message-outcome">
+              <i class="fas fa-exclamation-circle"></i>
+              <div>
+                <strong>What happened:</strong> Scammer downloaded photos from a public Instagram account and used a free AI app to morph them. After the first payment, demands doubled.
+                <br/><strong>Correct action:</strong> Do NOT pay. Screenshot all messages. Call 1930. Report profile on Instagram. File at cybercrime.gov.in.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ai-message-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <strong>Warning Signs of AI Scams:</strong>
+            <ul style="margin-top:0.5rem; padding-left:1.2rem; font-size:0.9rem;">
+              <li>Voice messages that sound slightly robotic or unnatural</li>
+              <li>Videos where lip movement doesn't match the words perfectly</li>
+              <li>Person refuses to do a live video call or makes constant excuses</li>
+              <li>Urgency + secrecy ("don't tell anyone") in money requests</li>
+              <li>Someone you've never met in person asking for money</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- TAB 4: HOW TO PROTECT ---- -->
+      <div class="ai-panel" id="ai-protection">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <h3>6 Steps to Protect Yourself from AI Scams</h3>
+          <p style="color:var(--text-light)">Simple actions you can take today — no tech knowledge needed.</p>
+        </div>
+
+        <div class="ai-protection-grid">
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">1</div>
+            <div class="ai-protect-content">
+              <h4>Verify Emergency Calls — Always</h4>
+              <p>If someone calls claiming to be a family member in an emergency, hang up and call them back on their usual saved number. Ask one question only they would know. Never send money based on a voice call alone.</p>
+            </div>
+          </div>
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">2</div>
+            <div class="ai-protect-content">
+              <h4>Set All Social Media to Private</h4>
+              <p>Go to Instagram and Facebook settings → Privacy → set profile to Private. Remove old public photo albums. AI needs your photos to create fakes — fewer public photos means less material for scammers.</p>
+            </div>
+          </div>
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">3</div>
+            <div class="ai-protect-content">
+              <h4>Demand a Live Video Call Before Trusting Anyone Online</h4>
+              <p>AI chatbots and deepfake operators cannot do real-time live video calls easily. If someone refuses to do a live video call after weeks of chatting — they are not who they claim to be.</p>
+            </div>
+          </div>
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">4</div>
+            <div class="ai-protect-content">
+              <h4>Never Send Money to Someone You Have Not Met in Person</h4>
+              <p>No matter how long you have chatted, how many photos or videos they have sent, or how caring they seem — never transfer money to someone you have never physically met. This rule has no exceptions.</p>
+            </div>
+          </div>
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">5</div>
+            <div class="ai-protect-content">
+              <h4>If Blackmailed — Do Not Pay, Report Immediately</h4>
+              <p>Paying a blackmailer once always leads to more demands. Take screenshots of all messages, block the person, and immediately report to cybercrime.gov.in or call 1930. Police can track and arrest the accused.</p>
+            </div>
+          </div>
+          <div class="ai-protect-card">
+            <div class="ai-protect-number">6</div>
+            <div class="ai-protect-content">
+              <h4>Trust Your Instincts</h4>
+              <p>If a voice sounds slightly "off," if a video looks unnaturally smooth, or if a conversation feels too perfect — trust that feeling. It costs nothing to verify. It can save everything to be cautious.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-resources">
+          <h4><i class="fas fa-link"></i> Report AI Crimes — Official Portals</h4>
+          <div class="ai-resource-links">
+            <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" class="ai-resource-link">
+              <i class="fas fa-globe"></i>
+              <div><strong>cybercrime.gov.in</strong><span>Report morphed images, deepfakes, blackmail — Women/Child Crime section</span></div>
+            </a>
+            <a href="tel:1930" class="ai-resource-link">
+              <i class="fas fa-phone"></i>
+              <div><strong>1930 — Cyber Crime Helpline</strong><span>Call immediately after any online fraud or AI-based scam</span></div>
+            </a>
+            <a href="tel:1091" class="ai-resource-link">
+              <i class="fas fa-female"></i>
+              <div><strong>1091 — Women Helpline</strong><span>24/7 support for women facing threats, blackmail, or harassment</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EMERGENCY HELPLINE STRIP -->
+  <div class="helpline-strip">
+    <div class="container">
+      <div class="helpline-content">
+        <i class="fas fa-phone-alt pulse"></i>
+        <strong>Emergency Helplines:</strong>
+        <span>Cyber Crime: <a href="tel:1930">1930</a></span>
+        <span>Women Helpline: <a href="tel:1091">1091</a></span>
+        <span>Police: <a href="tel:100">100</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span></a>
+          <p>Empowering women through digital literacy. A free resource for Self-Help Groups across India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="real-incidents.html"><i class="fas fa-chevron-right"></i> Real Incidents</a></li>
+            <li><a href="ai-safety.html"><i class="fas fa-chevron-right"></i> AI Safety</a></li>
+            <li><a href="file-complaint.html"><i class="fas fa-chevron-right"></i> File Complaint</a></li>
+            <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Safety Topics</h4>
+          <ul>
+            <li><a href="mobile-usage.html"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-chevron-right"></i> Online Safety</a></li>
+            <li><a href="social-media.html"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Emergency Contacts</h4>
+          <div class="emergency-list">
+            <div class="emergency-item"><i class="fas fa-laptop"></i><span>Cyber Crime</span><strong>1930</strong></div>
+            <div class="emergency-item"><i class="fas fa-phone"></i><span>Women Helpline</span><strong>1091</strong></div>
+            <div class="emergency-item"><i class="fas fa-shield-alt"></i><span>Police</span><strong>100</strong></div>
+            <div class="emergency-item"><i class="fas fa-ambulance"></i><span>Emergency</span><strong>112</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <a href="admin.html" style="color:inherit;text-decoration:none;" title="">2026</a> DigiSakhi. Made with <i class="fas fa-heart" style="color:#f472b6"></i> for Women of India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

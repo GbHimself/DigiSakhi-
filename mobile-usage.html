@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Usage – DigiSakhi</title>
+  <meta name="description" content="Learn how to use your smartphone — make calls, send WhatsApp messages, use the camera, manage storage, save battery, and use basic settings. Simple guide for SHG women."/>
+  <meta name="keywords" content="smartphone guide women India, how to use mobile phone, WhatsApp beginner, UPI mobile, phone settings SHG"/>
+  <meta name="author" content="DigiSakhi"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://digisakhi2026.netlify.app/mobile-usage.html"/>
+
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://digisakhi2026.netlify.app/mobile-usage.html"/>
+  <meta property="og:title"       content="Mobile Usage – DigiSakhi"/>
+  <meta property="og:description" content="Step-by-step smartphone guide for SHG women. Calls, WhatsApp, camera, storage, battery and settings."/>
+  <meta property="og:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Mobile Usage – DigiSakhi"/>
+  <meta name="twitter:description" content="Simple smartphone guide for women in Self-Help Groups."/>
+  <meta name="twitter:image"       content="https://digisakhi2026.netlify.app/images/og-preview.svg"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="js/translate.js"></script>
+  <script src="//translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#7c3aed"/>
+</head>
+<body>
+  <div id="google_translate_element" style="display:none;visibility:hidden;"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="mobile-usage.html" class="active"><i class="fas fa-mobile-alt"></i> Mobile Usage</a></li>
+        <li><a href="online-safety.html"><i class="fas fa-shield-halved"></i> Online Safety</a></li>
+        <li><a href="social-media.html"><i class="fas fa-share-nodes"></i> Social Media</a></li>
+        <li><a href="real-incidents.html"><i class="fas fa-exclamation-circle"></i> Real Incidents</a></li>
+        <li><a href="ai-safety.html"><i class="fas fa-robot"></i> AI Safety</a></li>
+        <li><a href="resources.html"><i class="fas fa-hands-helping"></i> Resources</a></li>
+        <li><a href="file-complaint.html"><i class="fas fa-gavel"></i> File Complaint</a></li>
+        <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode" title="Switch to dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background:linear-gradient(135deg,#1e40af,#3b82f6)">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="images/mu.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-icon"><i class="fas fa-mobile-alt"></i></div>
+      <h1>Mobile Usage</h1>
+      <p>Learn how to use your smartphone step by step — calls, WhatsApp, camera, payments, and more. No experience needed.</p>
+    </div>
+  </section>
+
+  <!-- TOPIC TABS -->
+  <section class="section bg-light">
+    <div class="container">
+
+      <div class="ri-tabs" id="muTabs">
+        
+        <button class="ri-tab active" onclick="switchMuTab('calls')" data-mu="calls">
+          <i class="fas fa-phone"></i> Calls & SMS
+        </button>
+        
+        <button class="ri-tab" onclick="switchMuTab('camera')" data-mu="camera">
+          <i class="fas fa-camera"></i> Camera
+        </button>
+        <button class="ri-tab" onclick="switchMuTab('whatyoucando')" data-mu="whatyoucando">
+          <i class="fas fa-hand-sparkles"></i> What You Can Do
+        </button>
+        <button class="ri-tab" onclick="switchMuTab('knowsettings')" data-mu="knowsettings">
+          <i class="fas fa-sliders-h"></i> Know Your Settings
+        </button>
+        <button class="ri-tab" onclick="switchMuTab('wellbeing')" data-mu="wellbeing">
+          <i class="fas fa-heart"></i> Digital Wellbeing
+        </button>
+        <button class="ri-tab" onclick="switchMuTab('shgbusiness')" data-mu="shgbusiness">
+          <i class="fas fa-store"></i> Mobile for SHG & Business
+        </button>
+      </div>
+
+      <!-- ── TAB 2: CALLS & SMS ── -->
+      <div class="ri-panel active" id="mu-calls">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>Making Calls and Sending Messages</h3>
+          <p style="color:var(--text-light)">How to call, save contacts, and send SMS</p>
+        </div>
+        <div class="mu-steps-grid">
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#16a34a,#14532d)">
+              <i class="fas fa-phone"></i>
+              <h4>Make a Phone Call</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Tap the <strong>Phone</strong> app (green icon) on your home screen</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap the <strong>keypad</strong> icon and type the number</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Press the <strong>green call button</strong> to call</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Press the <strong>red button</strong> to end the call</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> To call a saved contact — tap Contacts, search the name, tap the phone icon next to their name.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#2563eb,#1e3a8a)">
+              <i class="fas fa-user-plus"></i>
+              <h4>Save a Contact</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the <strong>Contacts</strong> app</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap the <strong>+ (Add)</strong> button</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Type the person's name and phone number</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Tap <strong>Save</strong></p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Save important numbers like 1930 (Cyber Crime), 1091 (Women Helpline), and your SHG leader's number.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">
+              <i class="fas fa-sms"></i>
+              <h4>Send an SMS</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the <strong>Messages</strong> app</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap the <strong>compose (pencil)</strong> icon</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Type the phone number or select a contact</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Type your message and tap the <strong>Send</strong> arrow</p></div></div>
+              </div>
+              <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> Never click links that come in SMS from unknown numbers — they could be scams.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#dc2626,#7f1d1d)">
+              <i class="fas fa-ban"></i>
+              <h4>Block a Number</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the <strong>Phone</strong> app and go to <strong>Recents</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap and hold the number you want to block</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Tap <strong>Block / Report Spam</strong></p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Confirm — the number can no longer call you</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Block all numbers that call asking for OTP, Aadhaar, or bank details immediately.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB 4: CAMERA ── -->
+      <div class="ri-panel" id="mu-camera">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>Using Your Phone Camera</h3>
+          <p style="color:var(--text-light)">Take photos, scan documents, and use Google Lens</p>
+        </div>
+        <div class="mu-steps-grid">
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+              <i class="fas fa-camera"></i>
+              <h4>Take a Clear Photo</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Tap the <strong>Camera</strong> app on your home screen</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Point the camera at what you want to photograph</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Tap the screen to <strong>focus</strong> on your subject</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Press the <strong>round shutter button</strong> to take the photo</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> For SHG product photos — use natural daylight, clean background, and hold the phone steady for sharp images.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#db2777,#9d174d)">
+              <i class="fas fa-file-image"></i>
+              <h4>Scan Documents</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Place your document flat on a table in good light</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Open Camera and hold it directly above the document</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Make sure all 4 corners are visible in the frame</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Take the photo — you can send it on WhatsApp or save it in DigiLocker</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Use <strong>Google Drive</strong> or <strong>DigiLocker</strong> to store digital copies of your Aadhaar, ration card, and bank passbook.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#ea580c,#9a3412)">
+              <i class="fas fa-search"></i>
+              <h4>Google Lens — Identify Anything</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open the <strong>Google</strong> app and tap the camera icon in the search bar</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Point it at any text, plant, product, or medicine</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Google will instantly identify it and show information</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Use Google Lens to read labels on medicine bottles, identify plants, check product prices, or translate text in any language.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#0369a1,#0c4a6e)">
+              <i class="fas fa-qrcode"></i>
+              <h4>Scan a QR Code</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open your phone camera and point it at the QR code</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Hold it steady — a link or information will appear on screen</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Tap the link only if you know and trust where it leads</p></div></div>
+              </div>
+              <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> Never scan QR codes sent to you on WhatsApp by unknown people — they can take money from your UPI account.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB 6: WHAT YOU CAN DO WITH YOUR MOBILE ── -->
+      <div class="ri-panel" id="mu-whatyoucando">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>What You Can Do With Your Mobile</h3>
+          <p style="color:var(--text-light)">Your smartphone is more powerful than you think — here are useful things it can do for you every day</p>
+        </div>
+        <div class="ai-helpful-grid">
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#2563eb"><i class="fas fa-rupee-sign"></i></div>
+            <h4>Pay Bills & Transfer Money</h4>
+            <p>Use Google Pay, PhonePe, or your bank app to pay electricity bills, mobile recharge, and send money to family — instantly, 24/7, no bank visit needed.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#059669"><i class="fas fa-graduation-cap"></i></div>
+            <h4>Learn New Skills Free</h4>
+            <p>Watch free tutorials on YouTube in Hindi and regional languages — cooking, stitching, pickle-making, farming, government schemes, and more.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#db2777"><i class="fas fa-heartbeat"></i></div>
+            <h4>Health & Medical Help</h4>
+            <p>Use Aarogya Setu to find nearby hospitals, book appointments, and check vaccination certificates. Use 1mg or Practo for medicine information.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#7c3aed"><i class="fas fa-id-card"></i></div>
+            <h4>Store Your Documents</h4>
+            <p>DigiLocker lets you store Aadhaar, ration card, birth certificate, and bank passbook digitally — accepted by government offices. Free and official.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#ea580c"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Navigate Anywhere</h4>
+            <p>Use Google Maps to find any location — hospitals, banks, government offices, markets. Works offline if you download your area map in advance.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#0d9488"><i class="fas fa-shopping-bag"></i></div>
+            <h4>Sell Your SHG Products</h4>
+            <p>Take photos of your handicrafts, pickles, or stitched items and share on Facebook Marketplace, WhatsApp groups, or Meesho to reach buyers across India.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#1d4ed8"><i class="fas fa-newspaper"></i></div>
+            <h4>Read News in Your Language</h4>
+            <p>Apps like Dailyhunt and ShareChat show news in Hindi, Tamil, Telugu, and 14 other Indian languages — stay informed about government schemes and local news.</p>
+          </div>
+          <div class="ai-help-card">
+            <div class="ai-help-icon" style="background:#9333ea"><i class="fas fa-phone-volume"></i></div>
+            <h4>Get Emergency Help Fast</h4>
+            <p>Save 1930 (cyber crime), 1091 (women helpline), 108 (ambulance), and 100 (police) in your contacts. One tap in an emergency can save lives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TAB 7: KNOW YOUR PHONE SETTINGS ── -->
+      <div class="ri-panel" id="mu-knowsettings">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>Know Your Phone Settings</h3>
+          <p style="color:var(--text-light)">Important settings every woman should know — privacy, notifications, accessibility and more</p>
+        </div>
+        <div class="mu-steps-grid">
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+              <i class="fas fa-user-shield"></i>
+              <h4>Privacy Settings</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Privacy</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Check which apps have access to your Camera, Microphone, Location, and Contacts</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Turn OFF access for apps that don't need it (e.g. a game doesn't need your microphone)</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Check <strong>Location</strong> — set to "Only while using app" for navigation apps</p></div></div>
+              </div>
+              <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> If an unknown app asks for access to your contacts or camera — say NO and uninstall it.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#0369a1,#0c4a6e)">
+              <i class="fas fa-bell-slash"></i>
+              <h4>Manage Notifications</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Notifications</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>You will see a list of all apps sending notifications</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Turn OFF notifications for apps you don't need updates from</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Keep ON: WhatsApp, banking apps, government apps</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Too many notifications drain your battery and distract you. Keep only important ones ON.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#16a34a,#14532d)">
+              <i class="fas fa-language"></i>
+              <h4>Change Phone Language</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → General Management → Language</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap <strong>Add Language</strong> and search your language (Hindi, Tamil, Telugu, etc.)</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Select it and set as default — your whole phone will switch to that language</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Using your phone in your own language makes it much easier and more comfortable to use.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#dc2626,#7f1d1d)">
+              <i class="fas fa-fingerprint"></i>
+              <h4>Fingerprint & Face Lock</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Security → Biometrics</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap <strong>Fingerprint</strong> or <strong>Face Recognition</strong></p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Follow the instructions to register your fingerprint or face</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Now you can unlock the phone with one touch — faster and safer than PIN</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Add your own fingerprint only — don't add anyone else's without your knowledge.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#d97706,#92400e)">
+              <i class="fas fa-universal-access"></i>
+              <h4>Accessibility — Bigger Text & Voice</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Accessibility</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap <strong>Font size and style</strong> → increase to Large or Huge</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Turn on <strong>TalkBack</strong> if you want the phone to read out everything aloud</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Turn on <strong>Display size</strong> to make icons and buttons bigger</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Bigger text is very helpful for elders or anyone with difficulty reading small text.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#0f766e,#134e4a)">
+              <i class="fas fa-child"></i>
+              <h4>Child / Guest Mode</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Some phones have <strong>Kids Mode</strong> — search it in Settings</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>You can restrict which apps children can use</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Set a PIN so children cannot exit Kids Mode without your permission</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Kids Mode prevents children from accidentally making calls, spending money, or accessing the internet unsafely.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB 8: DIGITAL WELLBEING ── -->
+      <div class="ri-panel" id="mu-wellbeing">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>Digital Wellbeing</h3>
+          <p style="color:var(--text-light)">Use your phone in a healthy and balanced way — protect your eyes, sleep, and time</p>
+        </div>
+        <div class="mu-steps-grid">
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">
+              <i class="fas fa-clock"></i>
+              <h4>Check Your Screen Time</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Digital Wellbeing and Parental Controls</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>You will see a dashboard showing how many hours you used your phone today</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>It shows which apps you used the most</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Set a <strong>daily timer</strong> on apps that distract you — phone will remind you when time is up</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Awareness of screen time helps you use your phone more purposefully and reduce unnecessary use.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#1d4ed8,#1e3a8a)">
+              <i class="fas fa-moon"></i>
+              <h4>Bedtime Mode & Sleep Better</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Go to <strong>Settings → Digital Wellbeing → Bedtime Mode</strong></p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Set a bedtime schedule (e.g. 10 PM to 6 AM)</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>The phone screen turns grey and silences notifications so you sleep better</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Avoid using your phone 30 minutes before sleeping. Blue screen light reduces sleep quality.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#ea580c,#9a3412)">
+              <i class="fas fa-eye"></i>
+              <h4>Protect Your Eyes</h4>
+            </div>
+            <div class="mu-card-body">
+              <ul class="styled-list" style="padding:0;list-style:none">
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Turn on <strong>Night Light / Eye Comfort</strong> — Settings → Display → Night Mode. Makes screen warmer and easier on eyes at night.</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Keep the phone at arm's length — not too close to your face</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Follow the 20-20-20 rule — every 20 minutes, look at something 20 feet away for 20 seconds</li>
+                <li><i class="fas fa-times-circle" style="color:#dc2626;margin-right:.5rem"></i> Do not use phone in complete darkness — always have some background light</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#059669,#065f46)">
+              <i class="fas fa-balance-scale"></i>
+              <h4>Healthy Mobile Habits</h4>
+            </div>
+            <div class="mu-card-body">
+              <ul class="styled-list" style="padding:0;list-style:none">
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Use your phone for <strong>productive things</strong> first — learning, banking, communication</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Keep mealtimes and family time phone-free</li>
+                <li><i class="fas fa-times-circle" style="color:#dc2626;margin-right:.5rem"></i> Do not forward messages without reading and verifying them first</li>
+                <li><i class="fas fa-times-circle" style="color:#dc2626;margin-right:.5rem"></i> Do not compare your life with what you see on social media — most is not real</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> If using phone feels addictive or stressful — take a 1-day break each week</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB 9: MOBILE FOR SHG & SMALL BUSINESS ── -->
+      <div class="ri-panel" id="mu-shgbusiness">
+        <div class="section-header" style="text-align:left;margin-bottom:1.5rem">
+          <h3>Mobile for SHG & Small Business</h3>
+          <p style="color:var(--text-light)">Use your phone to grow your SHG, sell products, manage money, and reach more customers</p>
+        </div>
+        <div class="mu-steps-grid">
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#1877f2,#1e3a8a)">
+              <i class="fab fa-facebook-f"></i>
+              <h4>Sell on Facebook Marketplace</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open Facebook → tap <strong>Marketplace</strong> (shop icon at bottom)</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Tap <strong>+ Sell</strong> → Item for sale</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Add photos of your product, name, price, and description</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Tap <strong>Next → Publish</strong> — your listing is now visible to buyers in your area</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Take bright, clear photos of your products — good photos get more buyers. Use natural daylight.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#e1306c,#833ab4)">
+              <i class="fab fa-instagram"></i>
+              <h4>Promote on Instagram</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Create a <strong>separate business account</strong> on Instagram for your SHG products</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Post photos with a short description and price in caption</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Use hashtags: <strong>#HandmadeIndia #SHGProducts #WomenEntrepreneur</strong></p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Ask buyers to message you directly to place an order</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Post regularly — even 3 photos a week can bring new customers. Stories disappear in 24 hours so use them for daily updates.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#4285f4,#1a237e)">
+              <i class="fas fa-rupee-sign"></i>
+              <h4>Collect Payments via UPI</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Open <strong>Google Pay or PhonePe</strong> → find your UPI ID (looks like name@ybl)</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Share your UPI ID with customers for payment</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Or show your QR code — tap "Receive Money" to get your QR</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>You will get an SMS and notification when payment arrives</p></div></div>
+              </div>
+              <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> To RECEIVE money — share only your UPI ID or QR code. Never enter your PIN to receive. Never approve a "collect request" from a buyer.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#059669,#065f46)">
+              <i class="fas fa-book"></i>
+              <h4>Track SHG Savings with Apps</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Download <strong>Google Sheets</strong> (free) from Play Store</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Create a sheet with member names, monthly savings, and loans</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>Share it with your SHG leader using "Share" button — everyone can see the same sheet</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>All changes sync automatically — no need for paper registers</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Google Sheets is free and works in Hindi. It auto-calculates totals so no math errors in savings records.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#f59e0b,#92400e)">
+              <i class="fas fa-store"></i>
+              <h4>Sell on Meesho</h4>
+            </div>
+            <div class="mu-card-body">
+              <div class="steps-list compact">
+                <div class="step"><div class="step-num">1</div><div class="step-text"><p>Download <strong>Meesho Supplier</strong> from Play Store</p></div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text"><p>Register with your phone number and bank details</p></div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text"><p>List your products with photos and price</p></div></div>
+                <div class="step"><div class="step-num">4</div><div class="step-text"><p>Meesho delivers to buyers all over India — you just pack and hand over to courier</p></div></div>
+              </div>
+              <div class="tip-box"><i class="fas fa-lightbulb"></i> Meesho is used by thousands of SHG women across India to sell sarees, handicrafts, and home-made food products nationwide.</div>
+            </div>
+          </div>
+
+          <div class="mu-card">
+            <div class="mu-card-header" style="background:linear-gradient(135deg,#0d9488,#134e4a)">
+              <i class="fas fa-users"></i>
+              <h4>Run SHG Meetings on WhatsApp</h4>
+            </div>
+            <div class="mu-card-body">
+              <ul class="styled-list" style="padding:0;list-style:none">
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Create a WhatsApp group for your SHG — add all members</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Share meeting date, venue, and agenda on the group in advance</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Collect monthly savings digitally via UPI and record in Google Sheets</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Share government scheme updates from official sources only</li>
+                <li><i class="fas fa-check-circle" style="color:#059669;margin-right:.5rem"></i> Use WhatsApp video call for members who cannot attend in person</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HELPLINE STRIP -->
+  <div class="helpline-strip">
+    <div class="container">
+      <div class="helpline-content">
+        <i class="fas fa-phone-alt pulse"></i>
+        <strong>Emergency Helplines:</strong>
+        <span>Cyber Crime: <a href="tel:1930">1930</a></span>
+        <span>Women Helpline: <a href="tel:1091">1091</a></span>
+        <span>Police: <a href="tel:100">100</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><i class="fas fa-mobile-screen-button"></i><span>DigiSakhi</span></a>
+          <p>Empowering women through digital literacy. A free resource for Self-Help Groups across India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="mobile-usage.html"><i class="fas fa-chevron-right"></i> Mobile Usage</a></li>
+            <li><a href="online-safety.html"><i class="fas fa-chevron-right"></i> Online Safety</a></li>
+            <li><a href="real-incidents.html"><i class="fas fa-chevron-right"></i> Real Incidents</a></li>
+            <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Safety Topics</h4>
+          <ul>
+            <li><a href="social-media.html"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+            <li><a href="ai-safety.html"><i class="fas fa-chevron-right"></i> AI Safety</a></li>
+            <li><a href="file-complaint.html"><i class="fas fa-chevron-right"></i> File Complaint</a></li>
+            <li><a href="feedback.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Emergency Contacts</h4>
+          <div class="emergency-list">
+            <div class="emergency-item"><i class="fas fa-laptop"></i><span>Cyber Crime</span><strong>1930</strong></div>
+            <div class="emergency-item"><i class="fas fa-phone"></i><span>Women Helpline</span><strong>1091</strong></div>
+            <div class="emergency-item"><i class="fas fa-shield-alt"></i><span>Police</span><strong>100</strong></div>
+            <div class="emergency-item"><i class="fas fa-ambulance"></i><span>Emergency</span><strong>112</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <a href="admin.html" style="color:inherit;text-decoration:none;" title="">2026</a> DigiSakhi. Made with <i class="fas fa-heart" style="color:#f472b6"></i> for Women of India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Mobile Usage tab switcher */
+    function switchMuTab(id) {
+      document.querySelectorAll('#muTabs .ri-tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.mu === id);
+      });
+      document.querySelectorAll('.ri-panel').forEach(p => {
+        p.classList.toggle('active', p.id === 'mu-' + id);
+      });
+    }
+  </script>
+
+  <style>
+    .mu-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .mu-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .mu-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      color: #fff;
+    }
+    .mu-card-header i { font-size: 1.8rem; flex-shrink: 0; }
+    .mu-card-header h4 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .mu-card-body { padding: 1.25rem 1.5rem; }
+    @media (max-width: 768px) {
+      .mu-steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</body>
+</html>
