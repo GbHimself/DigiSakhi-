@@ -6755,30 +6755,68 @@ body.dark-mode .chat-quick-btn:hover { background: #7c3aed; color: #fff; }
    ============================================ */
 
 /* Login button — lives inside nav-links on ALL screen sizes */
-/* Hidden desktop wrapper no longer used — login is a nav-links item */
-.user-nav-btn    { display: none !important; } /* safety: never shown in navbar */
-#userNavWrapper  { display: none !important; } /* safety: never shown in navbar */
+.user-nav-btn   { display: none !important; }
+#userNavWrapper { display: none !important; }
 
-/* On desktop: the login <li> sits at end of nav row, styled as a pill */
+/* Base style — mobile hamburger menu */
+.user-nav-mobile {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--purple);
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--purple-light);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin-top: .5rem;
+  transition: background .2s;
+}
+.user-nav-mobile:hover { background: var(--purple); color: #fff; }
+body.dark-mode .user-nav-mobile { background: #2d1b69; color: #c4b5fd; }
+body.dark-mode .user-nav-mobile:hover { background: #7c3aed; color: #fff; }
+
+/* Desktop nav row — pill style */
 @media (min-width: 1101px) {
-  .nav-login-li {
-    margin-left: .5rem;
-  }
+  .nav-login-li { margin-left: .25rem; }
   .nav-login-li .user-nav-mobile {
     display: inline-flex;
+    width: auto;
     padding: .4rem 1rem;
     border-radius: 50px;
     font-size: .82rem;
     margin-top: 0;
-    width: auto;
     background: linear-gradient(135deg, #7c3aed, #db2777);
     color: #fff;
-    border: none;
   }
   .nav-login-li .user-nav-mobile:hover {
     background: linear-gradient(135deg, #6d28d9, #be185d);
     color: #fff;
   }
+}
+
+/* Chatbot mobile overrides */
+@media (max-width: 480px) {
+  #chatbotBtn {
+    bottom: 1.5rem;
+    right: 1rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+    z-index: 10000;
+  }
+  #chatbotWindow {
+    width: calc(100vw - 1.5rem);
+    right: .75rem;
+    bottom: 5rem;
+    max-height: 70vh;
+    z-index: 10001;
+  }
+  .chat-messages { max-height: 50vh; }
 }
 
 /* Modal overlay */
