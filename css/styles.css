@@ -6799,26 +6799,6 @@ body.dark-mode .user-nav-mobile:hover { background: #7c3aed; color: #fff; }
   }
 }
 
-/* Chatbot mobile overrides */
-@media (max-width: 480px) {
-  #chatbotBtn {
-    bottom: 1.5rem;
-    right: 1rem;
-    width: 52px;
-    height: 52px;
-    font-size: 1.2rem;
-    z-index: 10000;
-  }
-  #chatbotWindow {
-    width: calc(100vw - 1.5rem);
-    right: .75rem;
-    bottom: 5rem;
-    max-height: 70vh;
-    z-index: 10001;
-  }
-  .chat-messages { max-height: 50vh; }
-}
-
 /* Modal overlay */
 #authModal {
   position: fixed;

@@ -1654,13 +1654,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLabel = document.getElementById('mobileLoginLabel');
     const mobileBtn   = document.getElementById('mobileLoginBtn');
     if (!mobileBtn) return;
+    /* Clone to remove any previously attached listeners, then re-attach */
+    const newBtn = mobileBtn.cloneNode(true);
+    mobileBtn.parentNode.replaceChild(newBtn, mobileBtn);
     if (currentUser) {
       const firstName = currentUser.name.split(' ')[0];
-      if (mobileLabel) mobileLabel.textContent = firstName + ' (Sign Out)';
-      mobileBtn.onclick = () => window._auth.logout();
+      const lbl = document.getElementById('mobileLoginLabel');
+      if (lbl) lbl.textContent = firstName + ' (Sign Out)';
+      newBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const hb = document.getElementById('hamburger');
+        const nl = document.getElementById('navLinks');
+        if (hb) hb.classList.remove('open');
+        if (nl) nl.classList.remove('open');
+        window._auth.logout();
+      });
     } else {
-      if (mobileLabel) mobileLabel.textContent = 'Login / Register';
-      mobileBtn.onclick = () => window._auth.openModal('login');
+      const lbl = document.getElementById('mobileLoginLabel');
+      if (lbl) lbl.textContent = 'Login / Register';
+      newBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const hb = document.getElementById('hamburger');
+        const nl = document.getElementById('navLinks');
+        if (hb) hb.classList.remove('open');
+        if (nl) nl.classList.remove('open');
+        window._auth.openModal('login');
+      });
     }
   }
 
