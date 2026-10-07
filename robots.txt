@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digisakhi2026.netlify.app/sitemap.xml
+Sitemap: https://gbhimself.github.io/DigiSakhi-/sitemap.xml

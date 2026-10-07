@@ -3,27 +3,27 @@
    Caches core pages for offline access
    ============================================ */
 
-const CACHE_NAME = 'digisakhi-v1';
+const CACHE_NAME = 'digisakhi-v2';
 
 /* Core files to cache on install */
 const CORE_ASSETS = [
-  '/',
-  '/index.html',
-  '/mobile-usage.html',
-  '/online-safety.html',
-  '/social-media.html',
-  '/real-incidents.html',
-  '/ai-safety.html',
-  '/resources.html',
-  '/file-complaint.html',
-  '/feedback.html',
-  '/quick-quiz.html',
-  '/404.html',
-  '/css/styles.css',
-  '/js/main.js',
-  '/js/translate.js',
-  '/scam-alerts.json',
-  '/images/og-preview.svg'
+  '/DigiSakhi-/',
+  '/DigiSakhi-/index.html',
+  '/DigiSakhi-/mobile-usage.html',
+  '/DigiSakhi-/online-safety.html',
+  '/DigiSakhi-/social-media.html',
+  '/DigiSakhi-/real-incidents.html',
+  '/DigiSakhi-/ai-safety.html',
+  '/DigiSakhi-/resources.html',
+  '/DigiSakhi-/file-complaint.html',
+  '/DigiSakhi-/feedback.html',
+  '/DigiSakhi-/quick-quiz.html',
+  '/DigiSakhi-/404.html',
+  '/DigiSakhi-/css/styles.css',
+  '/DigiSakhi-/js/main.js',
+  '/DigiSakhi-/js/translate.js',
+  '/DigiSakhi-/scam-alerts.json',
+  '/DigiSakhi-/images/og-preview.svg'
 ];
 
 /* Install — cache core assets */
@@ -76,7 +76,7 @@ self.addEventListener('fetch', event => {
       }).catch(() => {
         /* Offline fallback for HTML pages */
         if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/offline.html') || caches.match('/index.html');
+          return caches.match('/DigiSakhi-/offline.html') || caches.match('/DigiSakhi-/index.html');
         }
       });
     })

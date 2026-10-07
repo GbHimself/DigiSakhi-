@@ -2,12 +2,17 @@
    DigiSakhi – Main JavaScript
    ============================================ */
 
+/* ── Backend API base URL ── */
+const API_BASE = 'https://digisakhi-backend-0c6q.onrender.com/api';
+/* Change to http://localhost:3000/api during local development */
+
 /* ---- NAVBAR: Scroll shadow + Mobile menu ---- */
 const navbar    = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
 window.addEventListener('scroll', () => {
+  if (!navbar) return;
   if (window.scrollY > 50) navbar.classList.add('scrolled');
   else navbar.classList.remove('scrolled');
 });
@@ -1039,10 +1044,6 @@ if ('serviceWorker' in navigator) {
    REAL INCIDENTS — Dynamic Stories & Reviews
    Fetches from backend API (falls back to JSON)
    ============================================ */
-
-/* ── Backend API base URL ── */
-const API_BASE = 'https://digisakhi-backend-0c6q.onrender.com/api';
-/* Change to http://localhost:3000/api during local development */
 
 /* ── Platform colour map ── */
 const PLATFORM_COLORS = {

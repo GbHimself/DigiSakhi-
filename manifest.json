@@ -2,7 +2,8 @@
   "name": "DigiSakhi – Digital Empowerment for Women",
   "short_name": "DigiSakhi",
   "description": "Free digital literacy resource for women in Self-Help Groups. Learn smartphone basics, stay safe online, and access helplines.",
-  "start_url": "/",
+  "start_url": "/DigiSakhi-/",
+  "scope": "/DigiSakhi-/",
   "display": "standalone",
   "background_color": "#f8f4ff",
   "theme_color": "#7c3aed",
@@ -20,17 +21,17 @@
   "shortcuts": [
     {
       "name": "Online Safety",
-      "url": "/online-safety.html",
+      "url": "/DigiSakhi-/online-safety.html",
       "description": "Learn to stay safe online"
     },
     {
       "name": "File a Complaint",
-      "url": "/file-complaint.html",
+      "url": "/DigiSakhi-/file-complaint.html",
       "description": "Report cyber crime"
     },
     {
       "name": "Resources & Helplines",
-      "url": "/resources.html",
+      "url": "/DigiSakhi-/resources.html",
       "description": "Emergency helplines and resources"
     }
   ]
