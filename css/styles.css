@@ -6780,24 +6780,12 @@ body.dark-mode .chat-quick-btn:hover { background: #7c3aed; color: #fff; }
 body.dark-mode .user-nav-mobile { background: #2d1b69; color: #c4b5fd; }
 body.dark-mode .user-nav-mobile:hover { background: #7c3aed; color: #fff; }
 
-/* Desktop nav row — pill style */
+
+/* Hide login item from desktop nav row — only show in hamburger dropdown */
 @media (min-width: 1101px) {
-  .nav-login-li { margin-left: .25rem; }
-  .nav-login-li .user-nav-mobile {
-    display: inline-flex;
-    width: auto;
-    padding: .4rem 1rem;
-    border-radius: 50px;
-    font-size: .82rem;
-    margin-top: 0;
-    background: linear-gradient(135deg, #7c3aed, #db2777);
-    color: #fff;
-  }
-  .nav-login-li .user-nav-mobile:hover {
-    background: linear-gradient(135deg, #6d28d9, #be185d);
-    color: #fff;
-  }
+  .nav-login-li { display: none !important; }
 }
+
 
 /* Modal overlay */
 #authModal {
