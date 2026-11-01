@@ -243,6 +243,10 @@ document.querySelector('#mainApp .main').insertAdjacentHTML('beforeend', `
         <h3 style="font-size:.95rem;font-weight:600;margin-bottom:1rem;color:#f1f5f9"><i class="fas fa-search"></i> Top Searches</h3>
         <div id="topSearchesList"></div>
       </div>
+      <div class="table-wrap" style="padding:1.5rem">
+        <h3 style="font-size:.95rem;font-weight:600;margin-bottom:1rem;color:#f1f5f9"><i class="fas fa-file-alt"></i> Top Pages Visited</h3>
+        <div id="topPagesList"></div>
+      </div>
     </div>
   </div>
   <div class="section-page" id="page-users">
@@ -513,90 +517,139 @@ async function loadAnalytics(days = 30, btn) {
     document.querySelectorAll('#page-analytics .filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   }
+
+  /* Show loading state */
+  const statsEl = document.getElementById('analyticsStats');
+  if (statsEl) statsEl.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading analytics…</div>';
+
   try {
     const ANALYTICS_API = API.replace('/api/admin', '/api/analytics');
-    const d = await fetch(`${ANALYTICS_API}?days=${days}`, {
+    const res = await fetch(`${ANALYTICS_API}?days=${days}`, {
       headers: { 'Authorization': 'Bearer ' + TOKEN }
-    }).then(r => r.json());
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const d = await res.json();
 
     /* Overview stats */
-    document.getElementById('analyticsStats').innerHTML = `
-      <div class="stat-card purple"><div class="stat-num">${d.overview.totalViews}</div><div class="stat-label">Page Views (${days}d)</div></div>
-      <div class="stat-card red"><div class="stat-num">${d.overview.totalReports}</div><div class="stat-label">Total Reports</div><div class="stat-pending">${d.overview.pendingReports} pending</div></div>
-      <div class="stat-card green"><div class="stat-num">${d.overview.totalStories}</div><div class="stat-label">Total Stories</div><div class="stat-pending">${d.overview.pendingStories} pending</div></div>
-      <div class="stat-card orange"><div class="stat-num">${d.overview.totalReviews}</div><div class="stat-label">Total Reviews</div><div class="stat-pending">${d.overview.pendingReviews} pending</div></div>`;
+    if (statsEl) statsEl.innerHTML = `
+      <div class="stat-card purple"><div class="stat-num">${d.overview?.totalViews ?? 0}</div><div class="stat-label">Page Views (${days}d)</div></div>
+      <div class="stat-card red"><div class="stat-num">${d.overview?.totalReports ?? 0}</div><div class="stat-label">Total Reports</div><div class="stat-pending">${d.overview?.pendingReports ?? 0} pending</div></div>
+      <div class="stat-card green"><div class="stat-num">${d.overview?.totalStories ?? 0}</div><div class="stat-label">Total Stories</div><div class="stat-pending">${d.overview?.pendingStories ?? 0} pending</div></div>
+      <div class="stat-card orange"><div class="stat-num">${d.overview?.totalReviews ?? 0}</div><div class="stat-label">Total Reviews</div><div class="stat-pending">${d.overview?.pendingReviews ?? 0} pending</div></div>`;
 
-    /* Destroy old charts */
-    Object.values(chartInstances).forEach(c => c.destroy());
+    /* Destroy old charts safely */
+    Object.values(chartInstances).forEach(c => { try { c.destroy(); } catch {} });
     chartInstances = {};
 
     const chartDefaults = {
       plugins: { legend: { labels: { color: '#94a3b8', font: { family: 'Poppins', size: 11 } } } }
     };
 
-    /* Scam types pie chart */
-    if (d.scamTypes?.length > 0 && document.getElementById('scamChart')) {
-      chartInstances.scam = new Chart(document.getElementById('scamChart'), {
-        type: 'doughnut',
-        data: {
-          labels: d.scamTypes.map(s => s._id || 'Other'),
-          datasets: [{ data: d.scamTypes.map(s => s.count),
-            backgroundColor: ['#7c3aed','#dc2626','#ea580c','#d97706','#059669','#2563eb','#db2777','#0d9488','#6d28d9','#9f1239'],
-            borderWidth: 2, borderColor: '#1e293b' }]
-        },
-        options: { ...chartDefaults, maintainAspectRatio: false, cutout: '60%' }
-      });
+    /* ── Scam types doughnut chart ── */
+    const scamCanvas = document.getElementById('scamChart');
+    if (scamCanvas) {
+      if (d.scamTypes?.length > 0) {
+        chartInstances.scam = new Chart(scamCanvas, {
+          type: 'doughnut',
+          data: {
+            labels: d.scamTypes.map(s => s._id || 'Other'),
+            datasets: [{ data: d.scamTypes.map(s => s.count),
+              backgroundColor: ['#7c3aed','#dc2626','#ea580c','#d97706','#059669','#2563eb','#db2777','#0d9488','#6d28d9','#9f1239'],
+              borderWidth: 2, borderColor: '#1e293b' }]
+          },
+          options: { ...chartDefaults, maintainAspectRatio: false, cutout: '60%' }
+        });
+      } else {
+        scamCanvas.style.display = 'none';
+        scamCanvas.insertAdjacentHTML('afterend', '<div class="empty" style="padding:2rem;text-align:center">No scam reports yet</div>');
+      }
     }
 
-    /* Views over time line chart */
-    if (d.viewsOverTime?.length > 0 && document.getElementById('viewsChart')) {
-      chartInstances.views = new Chart(document.getElementById('viewsChart'), {
-        type: 'line',
-        data: {
-          labels: d.viewsOverTime.map(v => v._id),
-          datasets: [{ label: 'Page Views', data: d.viewsOverTime.map(v => v.count),
-            borderColor: '#7c3aed', backgroundColor: 'rgba(124,58,237,0.1)',
-            fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: '#7c3aed' }]
-        },
-        options: { ...chartDefaults, maintainAspectRatio: false,
-          scales: { x: { ticks: { color: '#64748b', maxTicksLimit: 8 }, grid: { color: '#1e293b' } },
-                    y: { ticks: { color: '#64748b' }, grid: { color: '#334155' }, beginAtZero: true } } }
-      });
+    /* ── Views over time line chart ── */
+    const viewsCanvas = document.getElementById('viewsChart');
+    if (viewsCanvas) {
+      if (d.viewsOverTime?.length > 0) {
+        chartInstances.views = new Chart(viewsCanvas, {
+          type: 'line',
+          data: {
+            labels: d.viewsOverTime.map(v => v._id),
+            datasets: [{ label: 'Page Views', data: d.viewsOverTime.map(v => v.count),
+              borderColor: '#7c3aed', backgroundColor: 'rgba(124,58,237,0.1)',
+              fill: true, tension: 0.4, pointRadius: 4, pointBackgroundColor: '#7c3aed' }]
+          },
+          options: { ...chartDefaults, maintainAspectRatio: false,
+            scales: {
+              x: { ticks: { color: '#64748b', maxTicksLimit: 8 }, grid: { color: '#1e293b' } },
+              y: { ticks: { color: '#64748b' }, grid: { color: '#334155' }, beginAtZero: true }
+            }
+          }
+        });
+      } else {
+        viewsCanvas.style.display = 'none';
+        viewsCanvas.insertAdjacentHTML('afterend', '<div class="empty" style="padding:2rem;text-align:center">No page view data yet</div>');
+      }
     }
 
-    /* Locations bar chart */
-    if (d.stateData?.length > 0 && document.getElementById('locationChart')) {
-      chartInstances.location = new Chart(document.getElementById('locationChart'), {
-        type: 'bar',
-        data: {
-          labels: d.stateData.map(s => s._id || 'Unknown'),
-          datasets: [{ label: 'Reports', data: d.stateData.map(s => s.count),
-            backgroundColor: 'rgba(219,39,119,0.7)', borderColor: '#db2777',
-            borderWidth: 1, borderRadius: 4 }]
-        },
-        options: { ...chartDefaults, maintainAspectRatio: false, indexAxis: 'y',
-          scales: { x: { ticks: { color: '#64748b' }, grid: { color: '#334155' }, beginAtZero: true },
-                    y: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: '#1e293b' } } } }
-      });
+    /* ── Locations bar chart ── */
+    const locationCanvas = document.getElementById('locationChart');
+    if (locationCanvas) {
+      if (d.stateData?.length > 0) {
+        chartInstances.location = new Chart(locationCanvas, {
+          type: 'bar',
+          data: {
+            labels: d.stateData.map(s => s._id || 'Unknown'),
+            datasets: [{ label: 'Reports', data: d.stateData.map(s => s.count),
+              backgroundColor: 'rgba(219,39,119,0.7)', borderColor: '#db2777',
+              borderWidth: 1, borderRadius: 4 }]
+          },
+          options: { ...chartDefaults, maintainAspectRatio: false, indexAxis: 'y',
+            scales: {
+              x: { ticks: { color: '#64748b' }, grid: { color: '#334155' }, beginAtZero: true },
+              y: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: '#1e293b' } }
+            }
+          }
+        });
+      } else {
+        locationCanvas.style.display = 'none';
+        locationCanvas.insertAdjacentHTML('afterend', '<div class="empty" style="padding:2rem;text-align:center">No location data yet</div>');
+      }
     }
 
-    /* Top searches list */
+    /* ── Top pages visited ── */
+    const pageViewsEl = document.getElementById('topPagesList');
+    if (pageViewsEl) {
+      if (d.pageViews?.length > 0) {
+        pageViewsEl.innerHTML = d.pageViews.map((p, i) => `
+          <div style="display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid #334155">
+            <span style="background:#0e7290;color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0">${i+1}</span>
+            <span style="flex:1;font-size:.82rem;color:#e2e8f0">${p._id}</span>
+            <span style="font-size:.75rem;color:#64748b;font-weight:600">${p.count} views</span>
+          </div>`).join('');
+      } else {
+        pageViewsEl.innerHTML = '<div class="empty">No page views tracked yet</div>';
+      }
+    }
+
+    /* ── Top searches list ── */
     const searchEl = document.getElementById('topSearchesList');
     if (searchEl) {
-      if (!d.topSearches?.length) {
-        searchEl.innerHTML = '<div class="empty">No searches yet</div>';
-      } else {
+      if (d.topSearches?.length > 0) {
         searchEl.innerHTML = d.topSearches.map((s, i) => `
-          <div style="display:flex;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid #334155">
+          <div style="display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid #334155">
             <span style="background:#7c3aed;color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0">${i+1}</span>
             <span style="flex:1;font-size:.82rem;color:#e2e8f0">${s._id}</span>
             <span style="font-size:.75rem;color:#64748b;font-weight:600">${s.count}x</span>
           </div>`).join('');
+      } else {
+        searchEl.innerHTML = '<div class="empty">No searches yet</div>';
       }
     }
 
   } catch (err) {
-    document.getElementById('analyticsStats').innerHTML = '<div class="empty">Could not load analytics. Make sure the analytics route is deployed.</div>';
+    console.error('Analytics error:', err);
+    const el = document.getElementById('analyticsStats');
+    if (el) el.innerHTML = `<div class="empty" style="grid-column:1/-1">⚠️ Could not load analytics: ${err.message}. Check backend is running.</div>`;
   }
 }
 
