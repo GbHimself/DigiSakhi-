@@ -95,8 +95,9 @@
     <h1><i class="fas fa-shield-alt"></i> DigiSakhi Admin</h1>
     <p>Sign in to manage the website content</p>
     <input type="text" class="login-input" id="loginUser" placeholder="Username" autocomplete="username"/>
-    <input type="password" class="login-input" id="loginPass" placeholder="Password" autocomplete="current-password"/>
-    <button class="login-btn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+    <input type="password" class="login-input" id="loginPass" placeholder="Password" autocomplete="current-password"
+      onkeydown="if(event.key==='Enter') doLogin()"/>
+    <button class="login-btn" id="loginBtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
     <div class="login-error" id="loginError"></div>
   </div>
 </div>
@@ -261,8 +262,10 @@ const API = 'https://digisakhi-backend-0c6q.onrender.com/api/admin';
 let TOKEN = localStorage.getItem('ds_admin_token') || '';
 let currentData = {};
 
-/* ── On load — check if already logged in ── */
+/* ── On load — wake up Render + check if already logged in ── */
 window.onload = () => {
+  /* Silently ping backend so Render wakes up before user clicks Sign In */
+  fetch('https://digisakhi-backend-0c6q.onrender.com/health').catch(() => {});
   if (TOKEN) { showApp(); loadDashboard(); }
 };
 
@@ -271,7 +274,15 @@ async function doLogin() {
   const user = document.getElementById('loginUser').value.trim();
   const pass = document.getElementById('loginPass').value;
   const err  = document.getElementById('loginError');
+  const btn  = document.getElementById('loginBtn');
   err.style.display = 'none';
+  if (!user || !pass) {
+    err.textContent = 'Please enter username and password.';
+    err.style.display = 'block';
+    return;
+  }
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in…';
   try {
     const res  = await fetch(`${API}/login`, {
       method: 'POST',
@@ -279,14 +290,17 @@ async function doLogin() {
       body: JSON.stringify({ username: user, password: pass })
     });
     const data = await res.json();
-    if (!res.ok) { err.textContent = data.error; err.style.display = 'block'; return; }
+    if (!res.ok) { err.textContent = data.error || 'Invalid credentials'; err.style.display = 'block'; return; }
     TOKEN = data.token;
     localStorage.setItem('ds_admin_token', TOKEN);
     showApp();
     loadDashboard();
   } catch {
-    err.textContent = 'Cannot connect to server. Is the backend running?';
+    err.textContent = 'Server is waking up — please wait 30 seconds and try again.';
     err.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In';
   }
 }
 
