@@ -87,6 +87,25 @@
     /* Section pages */
     .section-page{display:none}
     .section-page.active{display:block}
+    /* Detail modal */
+    #detailModal { position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:none;align-items:center;justify-content:center;padding:1rem }
+    #detailModal.open { display:flex }
+    .detail-card { background:#1e293b;border-radius:16px;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.6) }
+    .detail-header { display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #334155;position:sticky;top:0;background:#1e293b;z-index:1 }
+    .detail-header h3 { font-size:1rem;font-weight:700;color:#f1f5f9 }
+    .detail-close { background:none;border:none;color:#94a3b8;font-size:1.2rem;cursor:pointer;padding:.25rem }
+    .detail-close:hover { color:#f87171 }
+    .detail-body { padding:1.5rem }
+    .detail-field { margin-bottom:1.1rem }
+    .detail-field label { display:block;font-size:.72rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.3rem }
+    .detail-field p { color:#e2e8f0;font-size:.88rem;line-height:1.65;word-break:break-word }
+    .detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem }
+    .detail-actions { display:flex;gap:.6rem;flex-wrap:wrap;padding:1.25rem 1.5rem;border-top:1px solid #334155;background:#1e293b;position:sticky;bottom:0 }
+    .btn-full-approve { background:#059669;color:#fff;border:none;padding:.55rem 1.25rem;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer }
+    .btn-full-reject  { background:#dc2626;color:#fff;border:none;padding:.55rem 1.25rem;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer }
+    .btn-full-delete  { background:#374151;color:#f87171;border:none;padding:.55rem 1.25rem;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.85rem;cursor:pointer }
+    tr.clickable-row { cursor:pointer }
+    tr.clickable-row:hover td { background:#1e293b88!important }
   </style>
 </head>
 <body>
@@ -259,6 +278,18 @@ document.querySelector('#mainApp .main').insertAdjacentHTML('beforeend', `
     </div>
   </div>`);
 </script>
+
+<!-- Detail modal -->
+<div id="detailModal">
+  <div class="detail-card">
+    <div class="detail-header">
+      <h3 id="detailTitle">Report Details</h3>
+      <button class="detail-close" onclick="closeDetail()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="detail-body" id="detailBody"></div>
+    <div class="detail-actions" id="detailActions"></div>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
@@ -437,6 +468,7 @@ function renderTable(model, items) {
   };
 
   const rows = items.map(item => {
+    const itemJson = encodeURIComponent(JSON.stringify(item));
     let cells = '';
     if (model === 'reports') {
       cells = `<td>${item.scam_type}</td>
@@ -482,7 +514,7 @@ function renderTable(model, items) {
                  <button class="btn-delete" onclick="deleteItem('alerts','${item._id}')"><i class="fas fa-trash"></i></button>
                </div></td>`;
     }
-    return `<tr>${cells}</tr>`;
+    return `<tr class="clickable-row" onclick="showDetail('${model}','${itemJson}')">${cells}</tr>`;
   }).join('');
 
   const ths = headers[model].map(h => `<th>${h}</th>`).join('');
@@ -490,6 +522,108 @@ function renderTable(model, items) {
 }
 
 /* ── ACTIONS ── */
+/* ── DETAIL MODAL ── */
+let _detailItem = null;
+let _detailModel = null;
+
+function showDetail(model, itemJson) {
+  const item = JSON.parse(decodeURIComponent(itemJson));
+  _detailItem  = item;
+  _detailModel = model;
+
+  document.getElementById('detailModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  /* Title */
+  const titles = { reports:'Scam Report Detail', stories:'Story Detail', reviews:'Review Detail', alerts:'Alert Detail' };
+  document.getElementById('detailTitle').textContent = titles[model] || 'Detail';
+
+  /* Body */
+  let html = '';
+  if (model === 'reports') {
+    html = `
+      <div class="detail-grid">
+        <div class="detail-field"><label>Scam Type</label><p>${item.scam_type || '—'}</p></div>
+        <div class="detail-field"><label>Status</label><p><span class="status-badge ${item.status}">${item.status}</span></p></div>
+        <div class="detail-field"><label>Location</label><p>${item.location || '—'}</p></div>
+        <div class="detail-field"><label>Date</label><p>${item.date || '—'}</p></div>
+        <div class="detail-field"><label>Platform</label><p>${item.platform || '—'}</p></div>
+        <div class="detail-field"><label>Amount Lost</label><p>${item.amount_lost ? '₹'+item.amount_lost : '—'}</p></div>
+      </div>
+      <div class="detail-field"><label>Full Description</label><p>${item.description || '—'}</p></div>
+      <div class="detail-field"><label>How It Happened</label><p>${item.how_it_happened || '—'}</p></div>
+      <div class="detail-field"><label>Action Taken</label><p>${item.action_taken || '—'}</p></div>
+      <div class="detail-field"><label>Contact / Phone</label><p>${item.phone || item.contact || '—'}</p></div>
+      <div class="detail-field"><label>Submitted</label><p>${item.createdAt ? new Date(item.createdAt).toLocaleString('en-IN') : '—'}</p></div>`;
+  } else if (model === 'stories') {
+    html = `
+      <div class="detail-grid">
+        <div class="detail-field"><label>Name</label><p>${item.name || 'Anonymous'}</p></div>
+        <div class="detail-field"><label>Status</label><p><span class="status-badge ${item.status}">${item.status}</span></p></div>
+        <div class="detail-field"><label>Scam Type</label><p>${item.scam_type || '—'}</p></div>
+        <div class="detail-field"><label>Platform</label><p>${item.platform || '—'}</p></div>
+        <div class="detail-field"><label>Location</label><p>${item.location || '—'}</p></div>
+        <div class="detail-field"><label>Date</label><p>${item.date || '—'}</p></div>
+      </div>
+      <div class="detail-field"><label>Full Story</label><p>${item.story || '—'}</p></div>
+      <div class="detail-field"><label>Lesson Learned</label><p>${item.lesson || '—'}</p></div>
+      <div class="detail-field"><label>Outcome</label><p>${item.outcome || '—'}</p></div>`;
+  } else if (model === 'reviews') {
+    const stars = '★'.repeat(item.rating || 0) + '☆'.repeat(5 - (item.rating || 0));
+    html = `
+      <div class="detail-grid">
+        <div class="detail-field"><label>Name</label><p>${item.name || 'Anonymous'}</p></div>
+        <div class="detail-field"><label>Rating</label><p style="color:#f59e0b;font-size:1.2rem">${stars}</p></div>
+        <div class="detail-field"><label>Section</label><p>${item.section || '—'}</p></div>
+        <div class="detail-field"><label>Status</label><p><span class="status-badge ${item.status}">${item.status}</span></p></div>
+      </div>
+      <div class="detail-field"><label>Full Comment</label><p>${item.comment || '—'}</p></div>`;
+  } else if (model === 'alerts') {
+    html = `
+      <div class="detail-field"><label>Alert Text</label><p>${item.text || '—'}</p></div>
+      <div class="detail-grid">
+        <div class="detail-field"><label>Type</label><p>${item.type || '—'}</p></div>
+        <div class="detail-field"><label>Active</label><p>${item.active ? '✅ Yes' : '❌ No'}</p></div>
+      </div>
+      <div class="detail-field"><label>Created</label><p>${item.createdAt ? new Date(item.createdAt).toLocaleString('en-IN') : '—'}</p></div>`;
+  }
+  document.getElementById('detailBody').innerHTML = html;
+
+  /* Action buttons */
+  let actions = '';
+  if (model !== 'alerts') {
+    if (item.status !== 'approved') actions += `<button class="btn-full-approve" onclick="setStatusFromDetail('approved')">✅ Approve</button>`;
+    if (item.status !== 'rejected') actions += `<button class="btn-full-reject" onclick="setStatusFromDetail('rejected')">❌ Reject</button>`;
+  }
+  actions += `<button class="btn-full-delete" onclick="deleteFromDetail()"><i class="fas fa-trash"></i> Delete</button>`;
+  document.getElementById('detailActions').innerHTML = actions;
+}
+
+function closeDetail() {
+  document.getElementById('detailModal').classList.remove('open');
+  document.body.style.overflow = '';
+  _detailItem = null;
+  _detailModel = null;
+}
+
+async function setStatusFromDetail(status) {
+  if (!_detailItem || !_detailModel) return;
+  await setStatus(_detailModel, _detailItem._id, status);
+  closeDetail();
+}
+
+async function deleteFromDetail() {
+  if (!_detailItem || !_detailModel) return;
+  if (!confirm('Delete this entry permanently?')) return;
+  await deleteItem(_detailModel, _detailItem._id);
+  closeDetail();
+}
+
+/* Close modal on backdrop click */
+document.getElementById('detailModal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('detailModal')) closeDetail();
+});
+
 async function setStatus(model, id, status) {
   try {
     await api(`/${model}/${id}/status`, 'PATCH', { status });
