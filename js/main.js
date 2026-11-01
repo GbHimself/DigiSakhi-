@@ -1401,12 +1401,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── Add message to chat ── */
+  function formatBotText(text) {
+    return text
+      /* Bold: **text** → <strong> */
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      /* URLs → clickable links (open in new tab) */
+      .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:underline;">$1</a>')
+      /* Bullet points: lines starting with - or • */
+      .replace(/^[-•]\s+(.+)$/gm, '<li>$1</li>')
+      /* Wrap consecutive <li> items in <ul> */
+      .replace(/(<li>.*?<\/li>(\s*<li>.*?<\/li>)*)/gs, '<ul style="margin:.4rem 0 .4rem 1rem;padding:0;">$1</ul>')
+      /* Line breaks */
+      .replace(/\n/g, '<br>');
+  }
+
   function addBotMessage(text) {
     const div = document.createElement('div');
     div.className = 'chat-msg bot';
     div.innerHTML = `
       <div class="chat-msg-avatar"><i class="fas fa-robot"></i></div>
-      <div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+      <div class="chat-msg-bubble">${formatBotText(text)}</div>`;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
     msgCount++;
