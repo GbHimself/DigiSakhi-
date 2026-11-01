@@ -6781,9 +6781,31 @@ body.dark-mode .user-nav-mobile { background: #2d1b69; color: #c4b5fd; }
 body.dark-mode .user-nav-mobile:hover { background: #7c3aed; color: #fff; }
 
 
-/* Hide login item from desktop nav row — only show in hamburger dropdown */
+/* Desktop nav: show login as compact pill button */
 @media (min-width: 1101px) {
-  .nav-login-li { display: none !important; }
+  .nav-login-li {
+    margin-left: .3rem;
+    flex-shrink: 0;
+  }
+  .nav-login-li .user-nav-mobile {
+    display: inline-flex;
+    width: auto;
+    padding: .4rem 1.1rem;
+    border-radius: 50px;
+    font-size: .8rem;
+    margin-top: 0;
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+    color: #fff;
+    white-space: nowrap;
+  }
+  .nav-login-li .user-nav-mobile:hover {
+    background: linear-gradient(135deg, #6d28d9, #be185d);
+    color: #fff;
+    transform: scale(1.03);
+  }
+  .nav-login-li .user-nav-mobile.logged-in {
+    background: linear-gradient(135deg, #059669, #10b981);
+  }
 }
 
 
@@ -6963,23 +6985,4 @@ body.dark-mode .user-menu-item { color: #e5e7eb; }
 body.dark-mode .user-menu-item:hover { background: #263548; }
 
 /* ── Mobile login button inside hamburger menu ── */
-.user-nav-mobile {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .75rem 1rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: var(--purple);
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--purple-light);
-  border: none;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-  margin-top: .5rem;
-  transition: background .2s;
-}
-.user-nav-mobile:hover { background: var(--purple); color: #fff; }
-body.dark-mode .user-nav-mobile { background: #2d1b69; color: #c4b5fd; }
 body.dark-mode .user-nav-mobile:hover { background: #7c3aed; color: #fff; }
