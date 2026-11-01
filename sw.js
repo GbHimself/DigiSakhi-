@@ -3,7 +3,7 @@
    Caches core pages for offline access
    ============================================ */
 
-const CACHE_NAME = 'digisakhi-v2';
+const CACHE_NAME = 'digisakhi-v3';
 
 /* Core files to cache on install */
 const CORE_ASSETS = [
