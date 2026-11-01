@@ -324,9 +324,12 @@ function showApp() {
 function showPage(page) {
   document.querySelectorAll('.section-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
-  document.getElementById('page-' + page).classList.add('active');
-  event.currentTarget.classList.add('active');
+  const pg = document.getElementById('page-' + page);
+  if (pg) pg.classList.add('active');
+  if (event?.currentTarget) event.currentTarget.classList.add('active');
   if (page === 'dashboard') loadDashboard();
+  else if (page === 'analytics') { if (typeof loadAnalytics === 'function') loadAnalytics(30); }
+  else if (page === 'users') { if (typeof loadUsers === 'function') loadUsers(); }
   else loadTable(page);
 }
 
@@ -680,20 +683,6 @@ async function loadUsers() {
     el.innerHTML = '<div class="empty">Could not load users</div>';
   }
 }
-
-/* Patch showPage to handle analytics and users */
-const _origShowPage = showPage;
-window.showPage = function(page) {
-  document.querySelectorAll('.section-page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
-  const pg = document.getElementById('page-' + page);
-  if (pg) pg.classList.add('active');
-  if (event?.currentTarget) event.currentTarget.classList.add('active');
-  if (page === 'dashboard') loadDashboard();
-  else if (page === 'analytics') loadAnalytics(30);
-  else if (page === 'users') loadUsers();
-  else loadTable(page);
-};
 </script>
 </body>
 </html>
