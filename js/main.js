@@ -1530,31 +1530,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentUser = null;
 
-  /* ── Inject login button into navbar ── */
+  /* ── Inject fixed floating login button (bottom-left corner) ── */
   function injectAuthBtn() {
-    const navLinks = document.getElementById('navLinks');
-    if (!navLinks || document.getElementById('mobileLoginLi')) return;
+    if (document.getElementById('loginFab')) return;
 
-    /* Single login item — lives in nav-links on ALL screen sizes.
-       On desktop it appears as the last nav item (styled as a pill button).
-       On mobile it appears at the bottom of the hamburger dropdown. */
-    const loginLi = document.createElement('li');
-    loginLi.id = 'mobileLoginLi';
-    loginLi.className = 'nav-login-li';
-    loginLi.innerHTML = `<button class="user-nav-mobile" id="mobileLoginBtn">
-      <i class="fas fa-user-circle"></i> <span id="mobileLoginLabel">Login / Register</span>
-    </button>`;
-    navLinks.appendChild(loginLi);
+    /* Floating Action Button — bottom-left, always visible on all screens */
+    const fab = document.createElement('button');
+    fab.id        = 'loginFab';
+    fab.className = 'login-fab';
+    fab.setAttribute('aria-label', 'Login or Register');
+    fab.setAttribute('title', 'Login / Register');
+    fab.innerHTML = '<i class="fas fa-user-circle"></i><span class="login-fab-label" id="loginFabLabel">Login</span>';
+    document.body.appendChild(fab);
 
-    /* Use addEventListener — safer than inline onclick */
-    document.getElementById('mobileLoginBtn').addEventListener('click', (e) => {
+    fab.addEventListener('click', (e) => {
       e.stopPropagation();
-      /* Close hamburger menu first */
-      const hb = document.getElementById('hamburger');
-      const nl = document.getElementById('navLinks');
-      if (hb) hb.classList.remove('open');
-      if (nl) nl.classList.remove('open');
-      window._auth.openModal('login');
+      if (currentUser) {
+        /* Show a small dropdown near the button */
+        const menu = document.getElementById('loginFabMenu');
+        if (menu) menu.classList.toggle('open');
+      } else {
+        openModal('login');
+      }
+    });
+
+    /* Mini dropdown for logged-in state */
+    const menu = document.createElement('div');
+    menu.id        = 'loginFabMenu';
+    menu.className = 'login-fab-menu';
+    menu.innerHTML = `
+      <div class="login-fab-menu-header" id="fabMenuName">My Account</div>
+      <button class="login-fab-menu-item" onclick="window._auth.openProfile()">
+        <i class="fas fa-user"></i> My Profile
+      </button>
+      <button class="login-fab-menu-item danger" onclick="window._auth.logout()">
+        <i class="fas fa-sign-out-alt"></i> Sign Out
+      </button>`;
+    document.body.appendChild(menu);
+
+    /* Close menu on outside click */
+    document.addEventListener('click', (e) => {
+      if (!fab.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('open');
+      }
     });
   }
 
@@ -1682,38 +1700,22 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavBtn();
   }
 
-  /* ── Update nav button ── */
-  /* ── Update nav button ── */
+  /* ── Update floating login button ── */
   function updateNavBtn() {
-    const mobileLabel = document.getElementById('mobileLoginLabel');
-    const mobileBtn   = document.getElementById('mobileLoginBtn');
-    if (!mobileBtn) return;
-    /* Clone to remove any previously attached listeners, then re-attach */
-    const newBtn = mobileBtn.cloneNode(true);
-    mobileBtn.parentNode.replaceChild(newBtn, mobileBtn);
+    const fab      = document.getElementById('loginFab');
+    const fabLabel = document.getElementById('loginFabLabel');
+    const fabMenu  = document.getElementById('loginFabMenu');
+    const fabName  = document.getElementById('fabMenuName');
+    if (!fab) return;
     if (currentUser) {
       const firstName = currentUser.name.split(' ')[0];
-      const lbl = document.getElementById('mobileLoginLabel');
-      if (lbl) lbl.textContent = firstName + ' (Sign Out)';
-      newBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const hb = document.getElementById('hamburger');
-        const nl = document.getElementById('navLinks');
-        if (hb) hb.classList.remove('open');
-        if (nl) nl.classList.remove('open');
-        window._auth.logout();
-      });
+      if (fabLabel) fabLabel.textContent = firstName;
+      if (fabName)  fabName.textContent  = currentUser.name;
+      fab.classList.add('logged-in');
     } else {
-      const lbl = document.getElementById('mobileLoginLabel');
-      if (lbl) lbl.textContent = 'Login / Register';
-      newBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const hb = document.getElementById('hamburger');
-        const nl = document.getElementById('navLinks');
-        if (hb) hb.classList.remove('open');
-        if (nl) nl.classList.remove('open');
-        window._auth.openModal('login');
-      });
+      if (fabLabel) fabLabel.textContent = 'Login';
+      fab.classList.remove('logged-in');
+      if (fabMenu) fabMenu.classList.remove('open');
     }
   }
 
