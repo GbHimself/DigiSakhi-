@@ -269,10 +269,29 @@ let TOKEN = localStorage.getItem('ds_admin_token') || '';
 let currentData = {};
 
 /* ── On load — wake up Render + check if already logged in ── */
-window.onload = () => {
+window.onload = async () => {
   /* Silently ping backend so Render wakes up before user clicks Sign In */
   fetch('https://digisakhi-backend-0c6q.onrender.com/health').catch(() => {});
-  if (TOKEN) { showApp(); loadDashboard(); }
+  if (TOKEN) {
+    /* Verify token is still valid before showing the app */
+    try {
+      const test = await fetch(API + '/dashboard', {
+        headers: { 'Authorization': 'Bearer ' + TOKEN }
+      });
+      if (test.ok) {
+        showApp();
+        loadDashboard();
+      } else {
+        /* Token expired — clear it and show login */
+        TOKEN = '';
+        localStorage.removeItem('ds_admin_token');
+      }
+    } catch {
+      /* Network issue — show login screen */
+      TOKEN = '';
+      localStorage.removeItem('ds_admin_token');
+    }
+  }
 };
 
 /* ── LOGIN ── */
@@ -313,6 +332,10 @@ async function doLogin() {
 function doLogout() {
   TOKEN = '';
   localStorage.removeItem('ds_admin_token');
+  showLogin();
+}
+
+function showLogin() {
   document.getElementById('mainApp').style.display = 'none';
   document.getElementById('loginScreen').style.display = 'flex';
 }
@@ -343,6 +366,12 @@ async function api(path, method = 'GET', body = null) {
   };
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(API + path, opts);
+  if (res.status === 401) {
+    TOKEN = '';
+    localStorage.removeItem('ds_admin_token');
+    showLogin();
+    throw new Error('Session expired — please log in again');
+  }
   return res.json();
 }
 
@@ -350,6 +379,13 @@ async function api(path, method = 'GET', body = null) {
 async function loadDashboard() {
   try {
     const d = await api('/dashboard');
+    /* If token expired, backend returns {error:...} not {totals:...} */
+    if (d.error) {
+      TOKEN = '';
+      localStorage.removeItem('ds_admin_token');
+      showLogin();
+      return;
+    }
     document.getElementById('stat-reports').textContent = d.totals.reports;
     document.getElementById('stat-stories').textContent = d.totals.stories;
     document.getElementById('stat-reviews').textContent = d.totals.reviews;
